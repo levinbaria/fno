@@ -42,6 +42,16 @@ section.fno-contact-us-block__main-container {
     font-family: 'be_vietnam_proregular', sans-serif;
 }
 
+.fno-contact-us-block__image-required {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    color: red;
+    font-size: 18px;
+    justify-content: center ;
+}
+
 .fno-contact-us-block__hero-contact-us-card-wrapper {
     filter: drop-shadow(0 10px 23px rgba(111, 137, 163, 0.3));
     background-color: #ffffff;

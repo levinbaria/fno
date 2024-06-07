@@ -466,15 +466,7 @@ function Save(props) {
     contactImg,
     showImgOverlay,
     imgOverlayColor,
-    imgOverlayOpacity,
-    firstName,
-    lastName,
-    contactEmail,
-    contactWorkPhone,
-    contactCompany,
-    productArea,
-    country,
-    comment
+    imgOverlayOpacity
   } = attributes;
   const contactHeadingStyle = {};
   contactHeadingSize && isCustomHeadingSize && (contactHeadingStyle.fontSize = contactHeadingSize + 'px');
@@ -484,44 +476,6 @@ function Save(props) {
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps.save({
     className: 'fno-contact-us-block'
   });
-
-  // const [formData, setFormData] = useState({
-  // 	firstName,
-  // 	lastName,
-  // 	contactEmail,
-  // 	contactWorkPhone,
-  // 	contactCompany,
-  // 	productArea,
-  // 	country,
-  // 	comment,
-  // });
-
-  // const handleSubmit = async (e) => {
-  // 	e.preventDefault();
-
-  // 	const response = await fetch('/wp-json/contact-form/v1/submit', {
-  // 		method: 'POST',
-  // 		headers: {
-  // 			'Content-Type': 'application/json',
-  // 		},
-  // 		body: JSON.stringify(formData),
-  // 	});
-
-  // 	if (response.ok) {
-  // 		alert('Fprm submitted successfully');
-  // 	} else {
-  // 		alert('Failed to Submit the form');
-  // 	}
-  // };
-
-  // const handleChange = (e) => {
-  // 	const { name, value } = e.target;
-  // 	setFormData((prevData) => ({
-  // 		...prevData,
-  // 		[namw]: value,
-  // 	}));
-  // };
-
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...blockProps
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
@@ -542,7 +496,7 @@ function Save(props) {
     value: contactDescription,
     className: "fno-contact-us-block__contact-us-description",
     style: contactDescStyle
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  })), contactImg.url ? (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "fno-contact-us-block__hero-contact-us-card-wrapper"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "fno-contact-us-block__contact-us-hero-img"
@@ -566,7 +520,6 @@ function Save(props) {
     name: "firstName",
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('First name', 'fno-contact-us-block'),
     className: "fno-contact-us-block__contact-first-name"
-    // onChange={handleChange}
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('First Name', 'fno-contact-us-block'), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     style: {
       color: 'red',
@@ -577,7 +530,6 @@ function Save(props) {
     name: "lastName",
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Last name', 'fno-contact-us-block'),
     className: "fno-contact-us-block__contact-first-name"
-    // onChange={handleChange}
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Last Name', 'fno-contact-us-block'), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     style: {
       color: 'red',
@@ -589,7 +541,6 @@ function Save(props) {
     type: "email",
     name: "contactEmail",
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Email Address', 'fno-contact-us-block')
-    // onChange={handleChange}
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Email Address', 'fno-contact-us-block'), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     style: {
       color: 'red',
@@ -601,7 +552,6 @@ function Save(props) {
     type: "number",
     name: "contactWorkPhone",
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Work Phone', 'fno-contact-us-block')
-    // onChange={handleChange}
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Work Phone', 'fno-contact-us-block'), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     style: {
       color: 'red',
@@ -611,7 +561,6 @@ function Save(props) {
     type: "text",
     name: "contactCompany",
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Company', 'fno-contact-us-block')
-    // onChange={handleChange}
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Company', 'fno-contact-us-block'), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     style: {
       color: 'red',
@@ -621,8 +570,6 @@ function Save(props) {
     className: "fno-contact-us-block__form-contact-product-area"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("select", {
     name: "productArea"
-
-    // onChange={handleChange}
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("option", {
     value: "Austin"
   }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Austin', 'fno-contact-us-block')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("option", {
@@ -644,8 +591,6 @@ function Save(props) {
     className: "fno-contact-us-block__form-contact-country"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("select", {
     name: "country"
-
-    // onChange={handleChange}
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("option", {
     value: "America"
   }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('America', 'fno-contact-us-block')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("option", {
@@ -667,7 +612,6 @@ function Save(props) {
     type: "text",
     name: "comment",
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Comment', 'fno-contact-us-block')
-    // onChange={handleChange}
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Comment', 'fno-contact-us-block'), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     style: {
       color: 'red',
@@ -676,7 +620,9 @@ function Save(props) {
   }, "*"))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
     type: "submit",
     className: "fno-contact-us-block__form-contact-submit"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Submit', 'fno-contact-us-block'))))))));
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Submit', 'fno-contact-us-block'))))) : (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "fno-contact-us-block__image-required"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Image Required To show the form', 'fno-contact-us-block'))))));
 }
 
 /***/ }),
@@ -771,7 +717,7 @@ module.exports = window["wp"]["i18n"];
   \*******************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","name":"gb-final-exercise/contact-us-block","version":"0.1.0","title":"FNO Contact Us Block","category":"fno-blocks-custom-category","icon":"phone","description":"Contact Us Block for the Home Page","keywords":["Contact Us","Homepage","Form"],"supports":{"html":false},"textdomain":"fno-block","attributes":{"contactHeading":{"type":"string","default":""},"contactHeadingTag":{"type":"string","default":"h1"},"contactHeadingColor":{"type":"string","default":"#000000"},"isCustomHeadingSize":{"type":"boolean","default":false},"contactHeadingSize":{"type":"number","default":30},"contactDescription":{"type":"string","default":""},"contactDescriptionColor":{"type":"string","default":"#000000"},"contactImg":{"type":"object","default":{}},"showImgOverlay":{"type":"boolean","default":false},"imgOverlayColor":{"type":"string","default":"#000000"},"imgOverlayOpacity":{"type":"number","default":0.8},"firstName":{"type":"string","default":""},"lastName":{"type":"string","default":""},"contactEmail":{"type":"string","default":""},"contactWorkPhone":{"type":"number","default":""},"contactCompany":{"type":"string","default":""},"productArea":{"type":"string","default":""},"country":{"type":"string","default":""},"comment":{"type":"string","default":""}},"editorScript":"file:./index.js","style":"file:./style-index.css","editorStyle":"file:./index.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","name":"gb-final-exercise/contact-us-block","version":"0.1.0","title":"FNO Contact Us Block","category":"fno-blocks-custom-category","icon":"phone","description":"Contact Us Block for the Home Page","keywords":["Contact Us","Homepage","Form"],"supports":{"html":false},"textdomain":"fno-block","attributes":{"contactHeading":{"type":"string","default":""},"contactHeadingTag":{"type":"string","default":"h1"},"contactHeadingColor":{"type":"string","default":"#000000"},"isCustomHeadingSize":{"type":"boolean","default":false},"contactHeadingSize":{"type":"number","default":30},"contactDescription":{"type":"string","default":""},"contactDescriptionColor":{"type":"string","default":"#000000"},"contactImg":{"type":"object","default":{}},"showImgOverlay":{"type":"boolean","default":false},"imgOverlayColor":{"type":"string","default":"#000000"},"imgOverlayOpacity":{"type":"number","default":0.8}},"editorScript":"file:./index.js","style":"file:./style-index.css","editorStyle":"file:./index.css"}');
 
 /***/ })
 

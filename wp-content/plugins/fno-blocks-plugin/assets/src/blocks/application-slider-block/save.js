@@ -41,8 +41,6 @@ export default function Save(props) {
     const applicationDescStyle = {};
     applicationDescriptionColor && (applicationDescStyle.color = applicationDescriptionColor);
 
-
-
     const blockProps = useBlockProps.save({
         className: 'fno-application-slider',
         'data-auto-play': autoPlay,
@@ -52,6 +50,11 @@ export default function Save(props) {
         'data-show-dots': showDots,
         'data-auto-play-speed': autoplaySpeed,
     });
+
+    const validSliderCards = sliderCards.filter(
+        ({ sliderCardImg, sliderCardTitle, sliderCardDescription }) =>
+            sliderCardImg?.url && sliderCardTitle && sliderCardDescription
+    );
 
     return (
         <div {...blockProps}>
@@ -76,7 +79,7 @@ export default function Save(props) {
                         )}
                     </div>
                     <div className='fno-application-slider__cards-wrapper'>
-                        {sliderCards.map((sliderCard, index) => (
+                        {validSliderCards.map((sliderCard, index) => (
                             <div key={index} className='fno-application-slider__individual-card-wrapper'>
                                 {sliderCard.sliderCardImg.url && (
                                     <div className='fno-application-slider__individual-card-image'>

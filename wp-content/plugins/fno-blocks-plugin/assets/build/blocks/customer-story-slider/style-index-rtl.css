@@ -59,6 +59,11 @@
     height: auto;
 }
 
+.fno-customer-story__story-meta-info img {
+    width: 118px;
+    height: 100px;
+}
+
 .fno-customer-story__story-meta-info h4 {
     font-size: 32px;
     line-height: 42px;
@@ -109,6 +114,12 @@
     margin: 50px 0 40px 0;
     gap: 2rem;
     flex-wrap: wrap;
+}
+
+.fno-customer-story__story-author-details img {
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
 }
 
 .fno-customer-story__story-author-details {

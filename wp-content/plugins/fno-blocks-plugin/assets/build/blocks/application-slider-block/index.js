@@ -471,6 +471,11 @@ function Save(props) {
     'data-show-dots': showDots,
     'data-auto-play-speed': autoplaySpeed
   });
+  const validSliderCards = sliderCards.filter(({
+    sliderCardImg,
+    sliderCardTitle,
+    sliderCardDescription
+  }) => sliderCardImg?.url && sliderCardTitle && sliderCardDescription);
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...blockProps
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
@@ -491,7 +496,7 @@ function Save(props) {
     style: applicationDescStyle
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "fno-application-slider__cards-wrapper"
-  }, sliderCards.map((sliderCard, index) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, validSliderCards.map((sliderCard, index) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     key: index,
     className: "fno-application-slider__individual-card-wrapper"
   }, sliderCard.sliderCardImg.url && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
