@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "gb-final-exercise/customer-story-slider",
+  "version": "0.1.0",
+  "title": "FNO Customer Story",
+  "category": "fno-blocks-custom-category",
+  "icon": "testimonial",
+  "description": "Testimonials Slider for the Customer Story",
+  "keywords": ["Slider", "Customer Story", "Testimonials"],
+  "supports": {
+    "html": false
+  },
+  "textdomain": "fno-block",
+  "attributes": {
+    "storyCategories": {
+      "type": "array",
+      "default": []
+    },
+    "bgImg": {
+      "type": "object",
+      "default": {}
+    },
+    "autoplay": {
+      "type": "boolean",
+      "default": true
+    },
+    "pauseOnHover": {
+      "type": "boolean",
+      "default": true
+    },
+    "autoplaySpeed": {
+      "type": "number",
+      "default": 3000
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "editorStyle": "file:./index.css"
+}

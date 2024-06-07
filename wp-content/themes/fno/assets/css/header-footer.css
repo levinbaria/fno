@@ -1,0 +1,368 @@
+@font-face {
+    font-family: "Urbanist";
+    src: url(../fonts/Urbanist/urbanist-variablefont_wght-webfont.woff) format('woff');
+    src: url(../fonts/Urbanist/urbanist-variablefont_wght-webfont.woff2) format('woff2');
+    font-weight: nomal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'be_vietnam_proregular';
+    src: url('../fonts/Be-Vietnam-Pro/bevietnampro-regular-webfont.woff2') format('woff2'),
+        url('../fonts/Be-Vietnam-Pro/bevietnampro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    min-height: 100vh;
+    /* height: 300rem; */
+}
+
+/* Main header styling */
+.fno-theme__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Urbanist", sans-serif;
+    width: 100%;
+    position: relative;
+}
+
+.fno-theme__header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #EA002A, #E50695, #61CAC9, #C1D500, #CDD208, #EDCA1D, #FFC529, #FF9E24, #FF671C, #BB4700);
+}
+
+.fno-theme__header-wrapper {
+    /* width: 80%; */
+    max-width: 1280px;
+    margin: 45px auto 0;
+    padding: 0 40px;
+}
+
+.fno-theme__logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Styling for the search bar and the icons */
+.fno-theme__logo-section-addon-functionality {
+    display: flex;
+    align-items: center;
+}
+
+span .fa-magnifying-glass {
+    position: absolute;
+    top: 30%;
+    left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fno-theme__header-icons a i,
+.fno-theme__header-icons i,
+.fno-theme__menu-icon {
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.fa-solid.fa-xmark,
+.fno-theme__menu-icon {
+    display: none;
+}
+
+
+.fno-theme__header-icons a i:hover,
+.fno-theme__header-icons i:hover,
+.fno-theme__header-icons img:hover {
+    color: lightgray;
+    transform: translateY(2px);
+}
+
+
+.fno-theme__logo-section-addon-functionality form {
+    position: relative;
+    margin: 0 40px 0 0;
+}
+
+.fno-theme__logo-section-addon-functionality form input {
+    width: max-content;
+    padding: 12px 0 12px 50px;
+    border-radius: 25px;
+    font-size: 20px;
+    border: 2px solid lightgray;
+    outline: none;
+}
+
+.fno-theme__header-icons {
+    display: flex;
+    gap: 2rem;
+}
+
+.fno-theme__header-icons a {
+    color: black;
+}
+
+/* Navbar and it's related items styling */
+.fno-theme__nav-bar-wrapper {
+    width: 100%;
+    margin: 40px auto 0;
+    padding: 0 0 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+/* .fixed {
+    position: fixed;
+    top: 0;
+    width: 80%;
+    z-index: 1000;
+    transition: all 0.5s ease;
+}
+
+.fixed::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #EA002A, #E50695, #61CAC9, #C1D500, #CDD208, #EDCA1D, #FFC529, #FF9E24, #FF671C, #BB4700);
+} */
+
+.fno-theme__nav-bar-items {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.fno-theme__nav-bar-items li {
+    position: relative;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.fno-theme__nav-bar-items li:first-child {
+    padding-left: 0;
+}
+
+.fno-theme__nav-bar-items li.has-children a > i {
+    color: black;
+    font-size: 10px;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.fno-theme__nav-bar-items li li.has-children a > i {
+    color: black;
+    font-size: 12px;
+    vertical-align: 2px;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.fno-theme__nav-bar-items li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.fno-theme__nav-bar-items li.submenu-open a > i {
+    transform: rotate(180deg);
+}
+
+.fno-theme__nav-bar-items li a:hover,
+.fno-theme__nav-bar-items li a:hover i,
+.fno-theme__nav-bar-items li.active > a,
+.fno-theme__nav-bar-items li.active > a i {
+    color: #2670CA;
+}
+
+/* Navbar Submenu Styling  */
+.fno-theme__nav-bar-items .sub-menu {
+    position: absolute;
+    top: 73px;
+    padding: 27px 60px;
+    background-color: black;
+    list-style: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    display: none;
+    z-index: 10;
+    width: max-content;
+}
+
+.fno-theme__nav-bar-items .sub-menu li {
+    padding: 0 0 30px 0;
+}
+
+.fno-theme__nav-bar-items .sub-menu li:last-child {
+    padding: 0;
+}
+
+.fno-theme__nav-bar-items .sub-menu li a {
+    color: rgb(201, 199, 199);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.fno-theme__nav-bar-items .sub-menu li a:hover {
+    color: white;
+}
+
+
+.fno-theme__contact-wrapper {
+    margin-left: auto;
+    padding-left: 20px;
+}
+
+/* Contact Button Styling */
+.contact-btn {
+    background-image: linear-gradient(to right, #C40E91, #FE4D6E);
+    padding: 15px 27px;
+    border: none;
+    font-size: 18px;
+    border-radius: 27px;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 4px 2.67px 0 rgb(71, 71, 71, 0.4);
+    cursor: pointer;
+}
+
+.after {
+    margin: 2.5rem 0;
+}
+
+@media screen and (min-width: 1200px) and (max-width:1250px) {
+
+
+    .fno-theme__nav-bar-items .sub-menu li {
+        padding: 0 0 30px 0;
+    }
+
+    .fno-theme__nav-bar-items .sub-menu li a {
+        font-size: 14px;
+    }
+
+}
+
+/* Media Query for the nav-bar */
+@media screen and (min-width: 1024px) and (max-width:1200px) {
+
+    .fno-theme__nav-bar-items li {
+        padding: 0 13px;
+    }
+
+    .fno-theme__nav-bar-items li a {
+        font-size: 14px;
+    }
+
+    .fno-theme__nav-bar-items .sub-menu li {
+        padding: 0 0 30px 0;
+    }
+
+    .fno-theme__nav-bar-items .sub-menu li a {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .fno-theme__header-wrapper  {
+        width: 100%;
+    }
+
+    .fno-theme__header::after {
+        top: 110px;
+    }
+
+    .fno-theme__logo-section-addon-functionality form {
+        position: absolute;
+        left: 40px;
+        top: 8.5rem;
+        width: 80%;
+    }
+
+    .fno-theme__logo-section-addon-functionality form input {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    /* Navbar and it's related items styling */
+    .fno-theme__nav-bar-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 8.5rem auto 0;
+    }
+
+    .fno-theme__nav-bar-items {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .fno-theme__nav-bar-items li {
+        align-items: flex-start;
+        padding: 0 0 25px 0
+    }
+
+    .fno-theme__nav-bar-items li:first-child {
+        padding-left: 0;
+    }
+
+    .fno-theme__nav-bar-items li a {
+        font-size: 22px;
+        font-weight: 900;
+    }
+
+    /* Navbar Submenu Styling  */
+    .fno-theme__nav-bar-items .sub-menu {
+        font-family: 'be_vietnam_proregular', sans-serif;
+        position: initial;
+        background-color: white;
+        padding: 20px 25px 0;
+    }
+
+    .fno-theme__nav-bar-items .sub-menu li {
+        padding: 0;
+    }
+
+    .fno-theme__nav-bar-items .sub-menu li a {
+        color: black;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 50px;
+    }
+
+    .fno-theme__contact-wrapper {
+        margin: 0;
+        padding: 0;
+    }
+}

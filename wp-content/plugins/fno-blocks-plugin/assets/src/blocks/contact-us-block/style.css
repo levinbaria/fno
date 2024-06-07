@@ -1,0 +1,269 @@
+section.fno-contact-us-block__main-container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.fno-contact-us-block__contact-us-wrapper {
+    width: 80%;
+    max-width: 1200px;
+    padding: 140px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.fno-contact-us-block__contact-us-wrapper .fno-contact-us-block__contact-us-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.fno-contact-us-block__contact-us-heading {
+    font-size: 60px;
+    color: #000000;
+    font-weight: 700;
+    font-family: 'Urbanist', sans-serif;
+    text-align: center;
+    margin: 0 0 50px;
+}
+
+.fno-contact-us-block__contact-us-description {
+    font-size: 18px;
+    line-height: 30px;
+    color: #262e36;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 65px;
+    font-family: 'be_vietnam_proregular', sans-serif;
+}
+
+.fno-contact-us-block__hero-contact-us-card-wrapper {
+    filter: drop-shadow(0 10px 23px rgba(111, 137, 163, 0.3));
+    background-color: #ffffff;
+    display: flex;
+    width: 100%;
+}
+
+.fno-contact-us-block__contact-us-hero-img {
+    width: 100%;
+    max-width: 615px;
+    max-height: 914px;
+    position: relative;
+}
+
+.fno-contact-us-block__contact-us-hero-img img {
+    width: 100%;
+    height: 914px
+}
+
+.fno-contact-us-block__contact-us-hero-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fno-contact-us-block__contact-us-form-wrapper {
+    width: 100%;
+    padding: 40px;
+}
+
+.fno-contact-us-block__form-contact-name,
+.fno-contact-us-block__contact-email,
+.fno-contact-us-block__form-contact-company-details,
+.fno-contact-us-block__form-contact-comment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    width: 100%;
+    position: relative;
+    margin: 0 auto 28px;
+}
+
+.fno-contact-us-block__form-contact-product-area,
+.fno-contact-us-block__form-contact-country {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    position: relative;
+    margin: 0 auto 28px;
+}
+.fno-contact-us-block__form-contact-product-area label,
+.fno-contact-us-block__form-contact-country label {
+    font-size: 16px;
+    line-height: 30px;
+    color: #7a838d;
+    font-weight: 500;
+    font-family: 'Urbanist', sans-serif;
+    text-transform: none;
+}
+
+.fno-contact-us-block__form-contact-product-area select,
+.fno-contact-us-block__form-contact-country select {
+    color: black;
+    border-bottom: 1.5px solid lightgray;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    font-family: 'be_vietnam_proregular', sans-serif;
+    padding: 12px 0;
+    border: none;
+    outline: none;
+}
+
+.fno-contact-us-block__form-contact-name span,
+.fno-contact-us-block__contact-email,
+.fno-contact-us-block__form-contact-company-details span,
+.fno-contact-us-block__form-contact-comment {
+    position: relative;
+    display: block;
+}
+
+
+.fno-contact-us-block__form-contact-name .components-base-control__label,
+.fno-contact-us-block__form-contact-name label,
+.fno-contact-us-block__contact-email .components-base-control__label,
+.fno-contact-us-block__contact-email label,
+.fno-contact-us-block__form-contact-company-details .components-base-control__label,
+.fno-contact-us-block__form-contact-company-details label,
+.fno-contact-us-block__form-contact-comment .components-base-control__label,
+.fno-contact-us-block__form-contact-comment label{
+    font-size: 16px;
+    line-height: 30px;
+    color: #7a838d;
+    font-weight: 500;
+    font-family: 'Urbanist', sans-serif;
+    text-transform: none;
+    display: none;
+}
+
+.fno-contact-us-block__form-contact-name .components-text-control__input:not(:placeholder-shown)+label,
+.fno-contact-us-block__form-contact-name input:not(:placeholder-shown)+label,
+.fno-contact-us-block__contact-email .components-text-control__input:not(:placeholder-shown)+label,
+.fno-contact-us-block__contact-email input:not(:placeholder-shown)+label,
+.fno-contact-us-block__form-contact-company-details .components-text-control__input:not(:placeholder-shown)+label,
+.fno-contact-us-block__form-contact-company-details input:not(:placeholder-shown)+label,
+.fno-contact-us-block__form-contact-comment .components-text-control__input:not(:placeholder-shown)+label,
+.fno-contact-us-block__form-contact-comment input:not(:placeholder-shown)+label {
+    display: flex;
+    position: absolute;
+    top: -18px;
+    left: 0;
+}
+
+.fno-contact-us-block__form-contact-name .components-text-control__input,
+.fno-contact-us-block__form-contact-name input,
+.fno-contact-us-block__contact-email .components-text-control__input,
+.fno-contact-us-block__contact-email input,
+.fno-contact-us-block__form-contact-company-details .components-text-control__input,
+.fno-contact-us-block__form-contact-company-details input,
+.fno-contact-us-block__form-contact-comment .components-text-control__input,
+.fno-contact-us-block__form-contact-comment input {
+    padding: 8px 3px;
+    border: none;
+    color: black;
+    outline: none;
+    border-bottom: 1.5px solid lightgray;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    font-family: 'be_vietnam_proregular', sans-serif;
+}
+
+.fno-contact-us-block__contact-email input,
+.fno-contact-us-block__form-contact-comment input {
+    width: 100%;
+}
+
+.fno-contact-us-block__form-contact-name .components-text-control__input:focus,
+.fno-contact-us-block__form-contact-name input:focus,
+.fno-contact-us-block__contact-email .components-text-control__input:focus,
+.fno-contact-us-block__contact-email input:focus,
+.fno-contact-us-block__form-contact-company-details .components-text-control__input:focus,
+.fno-contact-us-block__form-contact-company-details input:focus,
+.fno-contact-us-block__form-contact-comment .components-text-control__input:focus,
+.fno-contact-us-block__form-contact-comment input:focus{
+    border-bottom: 2px solid #2670ca;
+}
+
+.fno-contact-us-block__form-contact-submit,
+button.components-button.\.fno-contact-us-block__form-contact-submit  {
+    margin: 12px auto;
+    padding: 18px 30px;
+    border-radius: 30px;
+    border: 2px solid #0069c1;
+    background-color: white;
+    font-size: 18px;
+    color: #262e36;
+    font-weight: 600;
+    font-family: 'Urbanist', sans-serif; 
+    width: max-content;
+    cursor: pointer;
+}
+
+.error-message {
+    position: relative;
+    top: -25px;
+    background-color: lightgray;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .fno-contact-us-block__hero-contact-us-card-wrapper {
+        flex-direction: column;
+    }
+
+    .fno-contact-us-block__contact-us-form-wrapper {
+        width: auto;
+    }
+
+    .fno-contact-us-block__contact-us-hero-img {
+        max-width: none;
+        max-height: 532px;
+
+    }
+
+    .fno-contact-us-block__contact-us-hero-img img {
+        width: 100%;
+        height: 532px
+    }
+
+    .fno-contact-us-block__form-contact-name,
+    .fno-contact-us-block__contact-email,
+    .fno-contact-us-block__form-contact-company-details {
+        display: flex;
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    .fno-contact-us-block__form-contact-name span,
+    .fno-contact-us-block__form-contact-company-details span {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .fno-contact-us-block__contact-us-wrapper {
+        padding: 66px 0;
+    }
+
+    .fno-contact-us-block__contact-us-heading,
+    .fno-contact-us-block__contact-us-description {
+        display: none;
+    }
+
+
+}

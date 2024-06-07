@@ -1,0 +1,15 @@
+html :where(.wp-block) {
+    margin-bottom: 0;
+    margin-top: 0;
+    max-width: 1440px;
+}
+
+.edit-post-visual-editor .components-button {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 18px;
+    padding: 0;
+}
+
+.fno-banner-block__overlay-setting {
+    margin: 16px auto;
+}

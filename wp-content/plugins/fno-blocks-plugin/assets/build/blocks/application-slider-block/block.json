@@ -1,0 +1,83 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "gb-final-exercise/application-slider-block",
+  "version": "0.1.0",
+  "title": "FNO Application Slider",
+  "category": "fno-blocks-custom-category",
+  "icon": "slides",
+  "description": "Slider Block for the Application",
+  "keywords": [
+    "Slider",
+    "Application",
+    "Custom Slider"
+  ],
+  "supports": {
+    "html": false
+  },
+  "textdomain": "fno-block",
+  "attributes": {
+    "applicationHeading": {
+      "type": "string",
+      "default": ""
+    },
+    "applicationHeadingTag": {
+      "type": "string",
+      "default": "h1"
+    },
+    "applicationHeadingColor": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "isCustomHeadingSize": {
+      "type": "boolean",
+      "default": false
+    },
+    "applicationHeadingSize": {
+      "type": "number",
+      "default": 30
+    },
+    "applicationDescription": {
+      "type": "string",
+      "default": ""
+    },
+    "applicationDescriptionColor": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "sliderCards": {
+      "type": "array",
+      "default": []
+    },
+    "sliderMode": {
+      "type": "boolean",
+      "default": true
+    },
+    "autoPlay": {
+      "type": "boolean",
+      "default": true
+    },
+    "pauseOnHover": {
+      "type": "boolean",
+      "default": true
+    },
+    "autoplaySpeed": {
+      "type": "number",
+      "default": 3000
+    },
+    "slideSpeed": {
+      "type": "number",
+      "default": 300
+    },
+    "showArrows": {
+      "type": "boolean",
+      "default": true
+    },
+    "showDots": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "editorStyle": "file:./index.css"
+}

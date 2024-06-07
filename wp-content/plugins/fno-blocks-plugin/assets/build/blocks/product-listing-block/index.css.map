@@ -1,0 +1,1 @@
+{"version":3,"file":"blocks/product-listing-block/index.css","mappings":";;;AAAA;IACI,aAAa;AACjB,C","sources":["webpack://fno-blocks/./assets/src/blocks/product-listing-block/editor.css"],"sourcesContent":[".fno-product-listing__breadcrumb {\r\n    display: none;\r\n}"],"names":[],"sourceRoot":""}

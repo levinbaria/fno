@@ -1,0 +1,206 @@
+section.fno-application-slider__main-container {
+    width: 100%;
+    background-color: #f2f3f5;
+    height: auto;
+}
+
+.fno-application-slider__application-wrapper {
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 140px 0;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.slick-next,
+.slick-prev {
+    top: 72.9% !important;
+}
+
+.slick-prev {
+    left: 48.1rem !important;
+    bottom: 24%;
+    z-index: 1;
+}
+
+.slick-next {
+    left: 51.5rem;
+}
+
+.slick-next:before {
+    content: '>' !important;
+}
+
+.slick-prev:before {
+    content: '<' !important;
+}
+
+.slick-next:before,
+.slick-prev:before {
+    background-color: #2670ca;
+    padding: 20px;
+    opacity: 1 !important;
+    font-weight: 900;
+}
+
+
+.slick-next {
+
+}
+
+.fno-application-slider__application-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    margin: 0 auto;
+}
+
+.fno-application-slider__application-heading {
+    font-size: 50px;
+    color: #000000;
+    font-weight: 700;
+    font-family: 'Urbanist', sans-serif;
+    text-align: center;
+    margin: 0 0 39px;
+}
+
+.fno-application-slider__application-description {
+    font-size: 18px;
+    line-height: 30px;
+    color: #262e36;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 65px;
+    font-family: 'be_vietnam_proregular', sans-serif;
+}
+
+.fno-application-slider__cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 90%;
+    margin: 0 0 0 auto;
+}
+
+.fno-application-slider__individual-card-wrapper {
+    width: 100%;
+    max-width: 875px;
+    margin-left: 30px;
+}
+
+.fno-application-slider__individual-card-image {
+    margin: 0 auto 35px;
+}
+
+.fno-application-slider__individual-card-image img {
+    width: 100%;
+    height: 513px;
+}
+
+.fno-application-slider__individual-card-wrapper h4 {
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+    font-weight: 700;
+    font-family: 'Urbanist', sans-serif;
+    margin: 0 0 19px;
+}
+
+.fno-application-slider__individual-card-wrapper p {
+    font-size: 18px;
+    line-height: 30px;
+    color: #262e36;
+    font-weight: 400;
+    font-family: 'be_vietnam_proregular', sans-serif;
+    margin: 0 auto 5px;
+}
+
+.fno-application-slider__slider-meta-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media screen and (max-width:1024px) {
+
+    .fno-application-slider__application-wrapper {
+        padding: 68px 0 58px;
+    }
+    
+    .fno-application-slider__cards-wrapper {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .fno-application-slider__application-header {
+        width: 80%;
+    }
+
+    .fno-application-slider__individual-card-wrapper {
+        margin-left: 0;
+    }
+
+    .fno-application-slider__individual-card-image img {
+        height: 430px;
+    }
+
+    .slick-next,
+    .slick-prev {
+        display: none !important;
+    }
+
+    .fno-application-slider__cards-wrapper .slick-dots {
+        bottom: -40px;
+    }
+
+    .fno-application-slider__cards-wrapper .slick-dots li button:before {
+        font-size: 30px;
+        color: #e0dfe4;
+        opacity: 1;
+    }
+    
+    .fno-application-slider__cards-wrapper .slick-dots li.slick-active button:before {
+        opacity: 1;
+        color: #2670ca;
+    }
+    
+
+}
+
+
+@media screen and (max-width:768px) {
+
+    .fno-application-slider__application-heading {
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    .fno-application-slider__application-description {
+        line-height: 34px;
+    }
+
+    .fno-application-slider__individual-card-image img {
+        height: 350px;
+    }
+
+    .fno-application-slider__individual-card-wrapper h4 {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .fno-application-slider__individual-card-image img {
+        height: 271px;
+    }
+}
+
+

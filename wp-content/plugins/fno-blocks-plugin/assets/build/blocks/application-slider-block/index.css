@@ -1,0 +1,63 @@
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./assets/src/blocks/application-slider-block/editor.css ***!
+  \***********************************************************************************************************************************************************************************************************/
+.fno-application-slider__card-modifications {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 6px;
+}
+
+button.components-button.is-button.is-destructive {
+    width: -moz-max-content;
+    width: max-content;
+    padding: 10px;
+}
+
+/* .fno-application-slider__add-slider-btn {
+    cursor: pointer;
+} */
+
+.fno-application-slider__slider-customizer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+i.dashicons.dashicons-no-alt::before,
+i.dashicons.dashicons-edit::before,
+i.dashicons.dashicons-plus-alt::before,
+i.dashicons.dashicons-saved::before,
+i.dashicons.dashicons-admin-customizer::before {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+i.dashicons.dashicons-no-alt,
+i.dashicons.dashicons-edit,
+i.dashicons.dashicons-plus-alt,
+i.dashicons.dashicons-saved,
+i.dashicons.dashicons-admin-customizer {
+    width: -moz-max-content;
+    width: max-content;
+    height: auto;
+    background-color: black;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.fno-application-slider__edit-mode-on {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+    margin-top: 2rem;
+}
+
+
+
+
+
+/*# sourceMappingURL=index.css.map*/

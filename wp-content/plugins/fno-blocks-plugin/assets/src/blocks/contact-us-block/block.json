@@ -1,0 +1,96 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "gb-final-exercise/contact-us-block",
+    "version": "0.1.0",
+    "title": "FNO Contact Us Block",
+    "category": "fno-blocks-custom-category",
+    "icon": "phone",
+    "description": "Contact Us Block for the Home Page",
+    "keywords": ["Contact Us", "Homepage", "Form"],
+    "supports": {
+      "html": false
+    },
+    "textdomain": "fno-block",
+    "attributes": {
+      "contactHeading": {
+        "type": "string",
+        "default": ""
+      },
+      "contactHeadingTag": {
+        "type": "string",
+        "default": "h1"
+      },
+      "contactHeadingColor": {
+        "type": "string",
+        "default": "#000000"
+      },
+      "isCustomHeadingSize": {
+        "type": "boolean",
+        "default": false
+      },
+      "contactHeadingSize": {
+        "type": "number",
+        "default": 30
+      },
+      "contactDescription": {
+        "type": "string",
+        "default": ""
+      },
+      "contactDescriptionColor": {
+        "type": "string",
+        "default": "#000000"
+      },
+      "contactImg": {
+        "type": "object",
+        "default": {}
+      },
+      "showImgOverlay": {
+        "type": "boolean",
+        "default": false
+      },
+      "imgOverlayColor": {
+        "type": "string",
+        "default": "#000000"
+      },
+      "imgOverlayOpacity": {
+        "type": "number",
+        "default": 0.8
+      },
+      "firstName": {
+        "type": "string",
+        "default": ""
+      },
+      "lastName": {
+        "type": "string",
+        "default": ""
+      },
+      "contactEmail": {
+        "type": "string",
+        "default": ""
+      },
+      "contactWorkPhone": {
+        "type": "number",
+        "default": ""
+      },
+      "contactCompany": {
+        "type": "string",
+        "default": ""
+      },
+      "productArea": {
+        "type": "string",
+        "default": ""
+      },
+      "country": {
+        "type": "string",
+        "default": ""
+      },
+      "comment": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "editorScript": "file:./index.js",
+    "style": "file:./style-index.css",
+    "editorStyle": "file:./index.css"
+  }
+  
