@@ -46,11 +46,6 @@ section.fno-application-slider__main-container {
     font-weight: 900;
 }
 
-
-.slick-next {
-
-}
-
 .fno-application-slider__application-header {
     display: flex;
     flex-direction: column;
@@ -110,7 +105,6 @@ section.fno-application-slider__main-container {
     color: #000000;
     font-weight: 700;
     font-family: 'Urbanist', sans-serif;
-    margin: 0 0 19px;
 }
 
 .fno-application-slider__individual-card-wrapper p {
@@ -126,6 +120,7 @@ section.fno-application-slider__main-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 0 19px;
 }
 
 
