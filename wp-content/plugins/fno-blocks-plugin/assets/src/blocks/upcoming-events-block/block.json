@@ -1,0 +1,40 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "gb-final-exercise/upcoming-events-blocks",
+    "version": "0.1.0",
+    "title": "FNO Upcoming Events",
+    "category": "fno-blocks-custom-category",
+    "icon": "megaphone",
+    "description": "Upcoming Events based on the Categories filter",
+    "keywords": ["Upcoming Events", "Events", "Categories based events"],
+    "supports": {
+      "html": false
+    },
+    "textdomain": "fno-block",
+    "attributes": {
+      "headingStyles": {
+        "type": "object",
+        "default": {
+          "color": "",
+          "isCustomSize": false,
+          "fontSize": ""
+        }
+      },
+      "description": {
+        "type": "string",
+        "default": ""
+      },
+      "descriptionColor": {
+        "type": "string",
+        "default": "#000000"
+      },
+      "eventsBannerImage": {
+        "type": "object",
+        "default": {}
+      }
+    },
+    "editorScript": "file:./index.js",
+    "style": "file:./style-index.css",
+    "editorStyle": "file:./index.css"
+}
+  

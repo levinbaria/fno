@@ -36,6 +36,12 @@ function fno_blocks_register_blocks()
 				'render_callback' => 'fno_block_product_listing_render_callback'
 			),
 		),
+		array(
+			'name' => 'upcoming-events-block',
+			'options' => array(
+				'render_callback' => 'fno_upcoming_events_render_callback'
+			),
+		),
 	);
 
 	foreach ($all_blocks as $block) {

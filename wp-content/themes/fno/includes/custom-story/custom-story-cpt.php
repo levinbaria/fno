@@ -69,6 +69,33 @@ function fno_theme_register_custom_story()
 	);
 
 	register_taxonomy('fno_customer_story_category', 'fno-customer-stories', $args_customer_story_category);
+
+	// Registered product tags taxonomy for the cpt Customer Story.
+	$fno_customer_story_product_tags = array(
+		'name' => __('Story Product Tags', 'fno-customer-story'),
+		'singular_name' => __('Story Product Tags', 'fno-customer-story'),
+		'search_items'      => __('Search Story Product Tags', 'fno-customer-story'),
+		'all_items'         => __('All Story Product Tags', 'fno-customer-story'),
+		'parent_item'       => __('Parent Type', 'fno-customer-story'),
+		'parent_item_colon' => __('Parent Type:', 'fno-customer-story'),
+		'edit_item'         => __('Edit Type', 'fno-customer-story'),
+		'update_item'       => __('Update Type', 'fno-customer-story'),
+		'add_new_item'      => __('Add New Story Product Tags', 'fno-customer-story'),
+		'new_item_name'     => __('New Story Product Tags Name', 'fno-customer-story'),
+		'menu_name'         => __('Story Product Tags', 'fno-customer-story'),
+	);
+
+	$args_customer_story_product_tags = array(
+		'labels'            => $fno_customer_story_product_tags,
+		'rewrite'           => array('slug' => 'story-product-tags'),
+		'hierarchical'      => true,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'show_in_rest'      => true,
+		'publicly_queryable'  => false,
+	);
+
+	register_taxonomy('fno_customer_story_product_tags', 'fno-customer-stories', $args_customer_story_product_tags);
 }
 
 // Initialize the hook for setting cpt and CPTs Taxonomy.

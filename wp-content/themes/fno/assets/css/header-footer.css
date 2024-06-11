@@ -260,6 +260,39 @@ span .fa-magnifying-glass {
     margin: 2.5rem 0;
 }
 
+/* Breadcrumd Styling */
+.fno-theme__breadcrumb {
+    padding: 30px 0 30px 130px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgba(112, 112, 112, 0.1);
+    gap: 10px;
+}
+
+.fno-theme__breadcrumb a,
+.fno-theme__breadcrumb span {
+    font-size: 14px;
+    line-height: 30px;
+    color: #262e36;
+    font-weight: 400;
+    font-family: 'be_vietnam_proregular', sans-serif;
+    text-decoration: none;
+}
+
+.fno-theme__breadcrumb a:hover {
+    color: lightcoral;
+}
+
+.fno-theme__breadcrumb i {
+    line-height: 30px;
+    font-size: 10px;
+    color: #262e36;
+}
+
+.fno-theme__breadcrumb span {
+    color: #2670ca;
+}
+
 @media screen and (min-width: 1200px) and (max-width:1250px) {
 
 
@@ -364,5 +397,9 @@ span .fa-magnifying-glass {
     .fno-theme__contact-wrapper {
         margin: 0;
         padding: 0;
+    }
+    
+    .fno-theme__breadcrumb {
+        padding: 30px 50px;
     }
 }

@@ -62,7 +62,7 @@ function fno_block_product_listing_render_callback($attributes)
 				<img src="<?php echo $categoryBannerImageUrl; ?>" alt="<?php esc_attr_e('Banner Image', 'fno-product-listing'); ?>" />
 			<?php endif; ?>
 		</div>
-		<div class="fno-product-listing__breadcrumb">
+		<div class="fno-theme__breadcrumb">
 			<?php
 			$breadcrumb = get_breadcrumb();
 			if (!empty($breadcrumb)) {

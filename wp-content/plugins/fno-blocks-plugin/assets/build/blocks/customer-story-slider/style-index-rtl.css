@@ -4,7 +4,7 @@
 .fno-customer-story__main-container {
     width: 80%;
     max-width: 1200px;
-    margin: 140px auto 80px;
+    margin: 140px auto 140px;
 }
 
 .fno-customer-story__wrapper {
@@ -232,6 +232,10 @@
 
     .fno-customer-story__slider-wrapper {
         top: 60px;
+    }
+
+    .fno-customer-story__story-meta-info h4 {
+        font-size: 26px;
     }
 
     .fno-customer-story__story-extra-details {

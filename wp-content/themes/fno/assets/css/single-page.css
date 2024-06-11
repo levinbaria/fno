@@ -205,23 +205,21 @@ section.fno-application-slider__main-container {
     padding: 65px 0
 }
 
+/* Customer Story Slider */
+.fno-customer-story__wrapper {
+    background-image: url(../images/bgstory.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.fno-customer-story__section-heading {
+    margin: 0 auto 69px;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: 'Urbanist', sans-serif;
+    text-align: center;
+}
 
 @media screen and (max-width:1024px) {
 
@@ -248,7 +246,12 @@ section.fno-application-slider__main-container {
 
 }
 
-
+@media screen and (max-width:768px) {
+    
+    .fno-customer-story__section-heading {
+        font-size: 35px;
+    }
+}
 
 @media screen and (max-width: 475px) {
 
@@ -276,7 +279,9 @@ section.fno-application-slider__main-container {
         flex-direction: column;
     }
 
-
+    .fno-customer-story__section-heading {
+        font-size: 28px;
+    }
 }
 
 @media screen and (max-width:375px) {

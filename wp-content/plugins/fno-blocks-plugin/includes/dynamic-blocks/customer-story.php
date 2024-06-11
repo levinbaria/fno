@@ -83,7 +83,7 @@ function fno_block_customer_story_slider_render_callback($attributes)
 									<img src="<?php echo esc_url($story_logo_image); ?>" alt="<?php esc_attr_e('Logo Image', 'fno-customer-story'); ?>">
 								<?php endif; ?>
 								<?php if ($story_title) : ?>
-									<h4><?php echo esc_html($story_title); ?></h4>
+									<h4><?php echo esc_html(truncate_text($story_title, 30)); ?></h4>
 								<?php endif; ?>
 							</div>
 							<div class="fno-customer-story__slider-summary-info">
@@ -99,7 +99,7 @@ function fno_block_customer_story_slider_render_callback($attributes)
 													<path id="Path 1002" d="M20.76 11.92L20.76 20.1L28 20.1L28 4.78L20.76 11.92ZM28 1.97L18.76 11.08L18.76 22.1L30 22.1L30 0L28 1.97Z" fill="#000000" fill-opacity="1.000000" fill-rule="evenodd" />
 												</svg>
 											</span>
-											<?php echo esc_html(truncate_text($story_description, 35)); ?>
+											<?php echo esc_html(truncate_text($story_description, 30)); ?>
 											<span class="quote-end">
 												<svg width="30.000000" height="22.109375" viewBox="0 0 30 22.1094" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 													<defs />

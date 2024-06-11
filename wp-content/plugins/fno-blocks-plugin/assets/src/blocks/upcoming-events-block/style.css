@@ -1,0 +1,280 @@
+main.fno-upcoming-events__main-container {
+	width: 100%;
+	background-color: rgb(243, 244, 246, 0.2);
+	opacity: 0.902;
+}
+
+.fno-upcoming-events__events-banner-image img {
+	height: 400px;
+	width: 100%;
+}
+
+section.fno-upcoming-events__events-hero-wrapper {
+	max-width: 1240px;
+	padding: 0 20px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.fno-upcoming-events__upcoming-event-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 60px 0 80px;
+}
+
+.fno-upcoming-events__event-main-heading h2 {
+	font-size: 50px;
+	color: #000000;
+	font-weight: 700;
+	font-family: 'Urbanist', sans-serif;
+	text-align: center;
+	margin: 0 auto 36px;
+}
+
+.fno-upcoming-events__event-main-description p {
+	font-size: 18px;
+	line-height: 30px;
+	color: #262e36;
+	font-weight: 400;
+	text-align: center;
+	padding: 0 115px;
+	font-family: 'be_vietnam_proregular', sans-serif;
+}
+
+.fno-upcoming-events__filter-events-wrapper {
+	margin: 0 0 100px;
+}
+
+.fno-upcoming-events__categories-list-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+ul.fno-upcoming-evets__categories {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+}
+
+.fno-upcoming-evets__categories li {
+	padding: 23px 35px;
+	border-bottom: 3px solid transparent;
+	transition: border-bottom 0.5s ease-in-out;
+}
+
+.fno-upcoming-evets__categories li.active {
+	border-bottom: 3px solid #003383;
+}
+
+.fno-upcoming-evets__categories li .event-category {
+	font-size: 20px;
+	color: #262e36;
+	font-weight: 700;
+	font-family: 'Urbanist', sans-serif;
+	text-decoration: none;
+}
+
+.fno-upcoming-events__event-search {
+	margin-left: auto;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.fno-upcoming-events__event-search input {
+	width: max-content;
+	padding: 14px 60px;
+	border-radius: 32px;
+	filter: drop-shadow(0 0 17.5px rgba(111, 137, 163, 0.3));
+	border: none;
+	outline: none;
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 400;
+	font-family: 'be_vietnam_proregular', sans-serif;
+}
+
+
+.fno-upcoming-events__event-search .search-icon {
+	position: absolute;
+	top: 17px;
+	left: 24px;
+	z-index: 1;
+}
+
+.fno-upcoming-events__events-card-wrapper {
+	margin: 57px 0 0;
+	display: flex;
+	gap: 30px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.fno-upcoming-events__individual-event-card {
+	background-color: #ffffff;
+	filter: drop-shadow(0 0 28.5px rgba(111, 137, 163, 0.2));
+	padding: 30px;
+	width: max-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-width: 370px;
+}
+
+.fno-upcoming-events__individual-event-card::after {
+	content: '';
+	height: 3px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-image: linear-gradient(90deg, #00153f 0%, #0069c1 100%);
+
+}
+
+.fno-upcoming-events__individual-event-img {
+	width: 100%;
+}
+
+.fno-upcoming-events__individual-event-img img {
+	width: 100%;
+	height: 174px;
+}
+
+.fno-upcoming-events__individual-event-title {
+	margin: 20px 0 30px;
+}
+
+.fno-upcoming-events__individual-event-title h4 {
+	font-size: 24px;
+	line-height: 34px;
+	color: #000000;
+	font-weight: 700;
+	text-align: center;
+	font-family: 'Urbanist', sans-serif;
+}
+
+.fno-upcoming-events__event-address {
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 30px
+}
+
+.fno-upcoming-events__event-address p {
+	font-size: 18px;
+	line-height: 30px;
+	color: #262e36;
+	font-weight: 400;
+	text-align: center;
+	font-family: 'be_vietnam_proregular', sans-serif;
+}
+
+.fno-upcoming-events__event-date {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin: 0 0 30px;
+}
+
+.fno-upcoming-events__event-date span .fa-calendar {
+	color: #003383;
+	font-size: 18px;
+}
+
+.fno-upcoming-events__event-date p {
+	font-size: 18px;
+	line-height: 40px;
+	color: #262e36;
+	font-weight: 500;
+	font-family: 'be_vietnam_proregular', sans-serif;
+}
+
+.fno-upcoming-events__event-explore {
+	margin: auto 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: max-content;
+	padding: 15px 30px;
+	border-radius: 27px;
+	background-color: white;
+	cursor: pointer;
+	border: 2px solid transparent;
+	background-clip: padding-box;
+	position: relative;
+	gap: 10px;
+	text-decoration: none;
+	font-size: 18px;
+	color: #262e36;
+	font-weight: 600;
+	font-family: 'Urbanist', sans-serif;
+}
+
+.fno-upcoming-events__event-explore::before {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	border-radius: 27px;
+	background-image: linear-gradient(90deg, #00153f 0%, #0069c1 100%);
+	z-index: -1;
+	background-clip: border-box;
+}
+
+.fno-upcoming-events__event-explore:hover {
+	background-image: linear-gradient(90deg, #00153f 0%, #0069c1 100%);
+	color: white;
+}
+
+
+@media screen and (max-width:1024px) {
+
+	main.fno-upcoming-events__main-container {
+		margin: 30px 0;
+	}
+
+	.fno-upcoming-events__event-main-description p {
+		padding: 0;
+	}
+
+	.fno-upcoming-events__categories-list-wrapper {
+		flex-direction: column-reverse;
+		gap: 50px;
+	}
+
+	.fno-upcoming-events__event-search {
+		margin-left: initial;
+	}
+
+	.fno-upcoming-events__event-search input {
+		width: 100%;
+	}
+
+}
+
+@media screen and (max-width:650px) {
+
+	.fno-upcoming-events__events-banner-image img {
+		height: 250px;
+	}
+
+	.fno-upcoming-events__event-main-heading h2 {
+		font-size: 40px;
+	}
+
+}
+
+@media screen and (max-width:376px) {
+
+	.fno-upcoming-events__individual-event-card {
+		max-width: 320px;
+	}
+}

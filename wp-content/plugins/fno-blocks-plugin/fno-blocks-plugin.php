@@ -96,3 +96,33 @@ add_action('enqueue_block_assets', 'fno_theme_enqueue_slick_styles');
 
 // Enqueue styles and scripts specifically for the Gutenberg editor
 add_action('enqueue_block_editor_assets', 'fno_theme_enqueue_slick_styles');
+
+function fno_upcoming_events_enqueue_scripts()
+{
+
+	// Defined the plugin directory URL
+	$plugin_dir_url = plugin_dir_url(__FILE__);
+
+	wp_enqueue_script(
+		'fno-upcoming-events-ajax',
+		$plugin_dir_url . 'assets/js/ajax-handler.js',
+		array('jquery'),
+		'1.0.0',
+		false
+	);
+
+	wp_localize_script(
+		'fno-upcoming-events-ajax',
+		'fnoUpcomingEventsAjax',
+		array(
+			'ajaxurl' => admin_url('admin-ajax.php'),
+			'nonce'   => wp_create_nonce('fno_upcoming_events_nonce'),
+		)
+	);
+}
+add_action('wp_enqueue_scripts', 'fno_upcoming_events_enqueue_scripts');
+
+add_action('enqueue_block_assets', 'fno_upcoming_events_enqueue_scripts');
+
+// Enqueue styles and scripts specifically for the Gutenberg editor
+add_action('enqueue_block_editor_assets', 'fno_upcoming_events_enqueue_scripts');
