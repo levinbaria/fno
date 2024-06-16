@@ -24,7 +24,6 @@
 body {
 	font-size: 16px;
 	min-height: 100vh;
-	/* height: 300rem; */
 }
 
 /* Main header styling */
@@ -49,7 +48,6 @@ body {
 }
 
 .fno-theme__header-wrapper {
-	/* width: 80%; */
 	max-width: 1280px;
 	margin: 45px auto 0;
 	padding: 0 40px;
@@ -131,24 +129,6 @@ span .fa-magnifying-glass {
 	transition: all 0.5s ease;
 }
 
-/* .fixed {
-	position: fixed;
-	top: 0;
-	width: 80%;
-	z-index: 1000;
-	transition: all 0.5s ease;
-}
-
-.fixed::after {
-	content: "";
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background: linear-gradient(to right, #EA002A, #E50695, #61CAC9, #C1D500, #CDD208, #EDCA1D, #FFC529, #FF9E24, #FF671C, #BB4700);
-} */
-
 .fno-theme__nav-bar-items {
 	display: flex;
 	list-style: none;
@@ -163,7 +143,6 @@ span .fa-magnifying-glass {
 	align-items: center;
 	justify-content: center;
 }
-
 
 .fno-theme__nav-bar-items li:first-child {
 	padding-left: 0;
@@ -237,7 +216,6 @@ span .fa-magnifying-glass {
 	color: white;
 }
 
-
 .fno-theme__contact-wrapper {
 	margin-left: auto;
 	padding-left: 20px;
@@ -294,7 +272,6 @@ span .fa-magnifying-glass {
 }
 
 /* Footer Styling */
-
 .fno-theme__footer-hero {
 	background-color: #08080b;
 	display: flex;
@@ -317,14 +294,12 @@ span .fa-magnifying-glass {
 	margin: 0  auto;
 	padding: 0 20px;
 	display: flex;
-	/* align-items: center; */
 	justify-content: space-between;
 }
 
 .fno-theme__fno-short-details-wrapper {
 	max-width: 35%;
 	padding: 100px 40px 0 0;
-	/* position: relative; */
 }
 
 .fno-theme__fno-intro {
@@ -333,8 +308,6 @@ span .fa-magnifying-glass {
 	justify-content: center;
 	padding: 0 0 0 65px;
 }
-
-.fno-theme__fno-intro a {}
 
 .fno-theme__fno-short-desc {
 	margin: 50px 0 10px;
@@ -375,7 +348,6 @@ span .fa-magnifying-glass {
 	font-family: 'Urbanist', sans-serif;
 }
 
-
 .fno-theme__footer-nav-bar-items a i {
 	display: none;
 }
@@ -385,7 +357,6 @@ span .fa-magnifying-glass {
 	flex-direction: column;
 	justify-content: center;
 	margin: 38px 0 0;
-	/* list-style: none; */
 }
 
 .fno-theme__footer-nav-bar-items>li .sub-menu li:hover {
@@ -454,10 +425,6 @@ ul.fno-theme__social-icons-wrapper {
 	gap: 20px;
 }
 
-.fno-theme__social-icons-wrapper li {
-	
-}
-
 .fno-theme__footer-nav-bar-items>li:last-child{
 	padding-right: 0;
 }
@@ -474,6 +441,49 @@ ul.fno-theme__social-icons-wrapper {
 .fno-theme__social-icons-wrapper li a i {
 	font-size: 14px;
 	line-height: 42px;
+}
+
+/* 404 Page*/
+.fno-theme__content-area {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.fno-theme__site-main {
+    padding: 50px 20px;
+}
+
+.fno-theme__error-404 .fno-theme__page-header {
+    margin-bottom: 40px;
+}
+
+.fno-theme__error-404 .fno-theme__page-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.fno-theme__page-content {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.fno-theme__page-content p {
+    margin-bottom: 20px;
+}
+
+.fno-theme__home-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0073aa;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.fno-theme__home-link:hover {
+    background-color: #005f8d;
 }
 
 @media screen and (min-width: 1200px) and (max-width:1250px) {
@@ -588,7 +598,6 @@ ul.fno-theme__social-icons-wrapper {
 
 
 	/* Footer Setting */
-
 	.fno-theme__footer-menu-wrapper {
 		flex-direction: column;
 		padding: 40px 36px;
@@ -610,14 +619,8 @@ ul.fno-theme__social-icons-wrapper {
 		margin: 0;
 	}
 
-	.fno-theme__footer-nav-bar-wrapper .fno-theme__footer-nav-bar-items {
-		/* justify-content: center; */
-	}
-
 	.fno-theme__footer-nav-bar-items>li {
 		padding: 80px 28px 40px;
-		/* border-left: none; */
-		/* border-bottom: none; */
 		width: 33%;
 	}
 
@@ -667,6 +670,14 @@ ul.fno-theme__social-icons-wrapper {
 		line-height: 30px;
 	}
 
+	.fno-theme__site-main {
+        padding: 30px 15px;
+    }
+
+    .fno-theme__error-404 .fno-theme__page-title {
+        font-size: 28px;
+    }
+
 }
 
 @media screen and (max-width:375px) {
@@ -696,6 +707,18 @@ ul.fno-theme__social-icons-wrapper {
 	img.footer-banner-img {
 		width: 100%;
 	}
+
+	.fno-theme__site-main {
+        padding: 20px 10px;
+    }
+
+    .fno-theme__error-404 .fno-theme__page-title {
+        font-size: 24px;
+    }
+
+    .page-content {
+        font-size: 16px;
+    }
 
 
 }
