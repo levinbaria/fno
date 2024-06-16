@@ -13,7 +13,7 @@ $copyright_text = esc_html( get_option( 'fno_theme_copyright_text' ) );
 					<div class="fno-theme__fno-intro">
 						<a href="<?php echo site_url(); ?>">
 							<?php if ( ! empty( $footer_logo ) ) : ?>
-								<img src="<?php echo $footer_logo; ?>" alt="fno-logo" width="150px" height="100px" />
+								<img src="<?php echo $footer_logo; ?>" alt="fno-logo" width="100px" height="32px" />
 							<?php endif; ?>
 						</a>
 						<p class="fno-theme__fno-short-desc">

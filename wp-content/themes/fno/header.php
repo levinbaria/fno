@@ -16,7 +16,7 @@
 			<div class="fno-theme__logo">
 				<a href="<?php echo site_url(); ?>">
 					<?php if ( ! empty( $header_logo ) ) : ?>
-						<img src="<?php echo $header_logo; ?>" alt="fno-logo" width="150px" height="100px" />
+						<img src="<?php echo $header_logo; ?>" alt="fno-logo" width="100px" height="32px" />
 					<?php endif; ?>
 				</a>
 			</div>

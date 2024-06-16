@@ -94,7 +94,7 @@ function fno_theme_logo_cb(){
         <input type="hidden" id="fno_theme_logo" name="fno_theme_logo" value="<?php echo esc_attr($logo); ?>" />
         <div id="logo_preview">
             <?php if ($logo) : ?>
-                <img src="<?php echo esc_url($logo); ?>" style="max-width:100%; height:200px;">
+                <img src="<?php echo esc_url($logo); ?>" style="max-width:100px; height:100px;">
             <?php endif; ?>
         </div>
         <button type="button" class="button" id="upload_logo_button"><span class="dashicons dashicons-upload"></span></button>

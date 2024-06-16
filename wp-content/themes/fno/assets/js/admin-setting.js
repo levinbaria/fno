@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
         mediaUploader.on('select', function() {
             const attachment = mediaUploader.state().get('selection').first().toJSON();
             $('#fno_theme_logo').val(attachment.url);
-            $('#logo_preview').html('<img src="' + attachment.url + '" style="max-width:100%; height:200px;">');
+            $('#logo_preview').html('<img src="' + attachment.url + '" style="max-width:100px; height:100px;">');
             toggleLogoButtons(true);
         });
 
