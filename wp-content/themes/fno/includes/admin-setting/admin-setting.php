@@ -178,7 +178,7 @@ function fno_theme_custom_settings_cb() {
         wp_die( 'You do not have sufficient permissions to access this page' );
     }
     ?>
-    <div class="wrap">
+    <div class="wrapper">
         <h1><?php esc_html_e( 'FNO Admin Settings', 'fno-theme-admin-menu' ); ?></h1>
 
         <form method="post" action="options.php">
