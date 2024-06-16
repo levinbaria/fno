@@ -56,6 +56,15 @@ export default function Save(props) {
             sliderCardImg?.url && sliderCardTitle && sliderCardDescription
     );
 
+    function truncateText(text, wordLimit) {
+        if (!text) return '';
+        const words = text.split(' ');
+        if (words.length > wordLimit) {
+            return words.slice(0, wordLimit).join(' ') + '...';
+        }
+        return text;
+    }
+
     return (
         <div {...blockProps}>
             <section className='fno-application-slider__main-container'>
@@ -106,7 +115,7 @@ export default function Save(props) {
                                 {sliderCard.sliderCardDescription && (
                                     <RichText.Content
                                         tagName='p'
-                                        value={sliderCard.sliderCardDescription}
+                                        value={truncateText(sliderCard.sliderCardDescription, 25)}
                                         className='fno-application-slider__individual-card-description'
                                     />
                                 )}

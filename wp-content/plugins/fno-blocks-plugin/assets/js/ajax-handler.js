@@ -1,5 +1,7 @@
 jQuery(document).ready(function ($) {
 
+    let searchTimeout;
+
     // Fetch all events initially by triggering the "All" category
     $(window).on('load', function() {
         fetchEvents(0, '');
@@ -52,6 +54,14 @@ jQuery(document).ready(function ($) {
         $('.fno-upcoming-evets__categories li.active a').trigger('click');
     });
 
+    $(document).on('input', 'input[name="upcoming-events"]', function() {
+        const searchQuery = $(this).val().toLowerCase();
+        const categoryId = $('.fno-upcoming-evets__categories .active a').data('category-id');
 
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(function() {
+            fetchEvents(categoryId, searchQuery);
+        }, 300); // Delay the request by 300ms to avoid excessive requests
+    });
 
 });

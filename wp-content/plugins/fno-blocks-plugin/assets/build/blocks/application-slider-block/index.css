@@ -56,6 +56,14 @@ i.dashicons.dashicons-admin-customizer {
     margin-top: 2rem;
 }
 
+.slick-next,
+.slick-prev {
+    top: 35% !important;
+}
+
+.slick-prev {
+    left: 0 !important;
+}
 
 
 

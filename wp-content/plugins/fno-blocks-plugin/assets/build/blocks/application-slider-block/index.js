@@ -162,6 +162,16 @@ function Edit(props) {
       sliderMode: true
     });
   };
+
+  // Truncate text to a specified number of words
+  function truncateText(text, wordLimit) {
+    if (!text) return '';
+    const words = text.split(' ');
+    if (words.length > wordLimit) {
+      return words.slice(0, wordLimit).join(' ') + '...';
+    }
+    return text;
+  }
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Application Heading Settings', 'fno-application-slider'),
     initialOpen: false
@@ -342,7 +352,7 @@ function Edit(props) {
     className: "fno-application-slider__individual-card-title"
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     tagName: "p",
-    value: sliderCard.sliderCardDescription,
+    value: truncateText(sliderCard.sliderCardDescription, 25),
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Card Description', 'fno-application-slider'),
     onChange: value => updateSliderCard(index, {
       sliderCardDescription: value
@@ -476,6 +486,14 @@ function Save(props) {
     sliderCardTitle,
     sliderCardDescription
   }) => sliderCardImg?.url && sliderCardTitle && sliderCardDescription);
+  function truncateText(text, wordLimit) {
+    if (!text) return '';
+    const words = text.split(' ');
+    if (words.length > wordLimit) {
+      return words.slice(0, wordLimit).join(' ') + '...';
+    }
+    return text;
+  }
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...blockProps
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
@@ -518,7 +536,7 @@ function Save(props) {
     class: "total-slides"
   }, "04"))), sliderCard.sliderCardDescription && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
     tagName: "p",
-    value: sliderCard.sliderCardDescription,
+    value: truncateText(sliderCard.sliderCardDescription, 25),
     className: "fno-application-slider__individual-card-description"
   })))))));
 }

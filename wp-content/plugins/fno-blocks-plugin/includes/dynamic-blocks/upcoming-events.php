@@ -80,7 +80,8 @@ function fno_upcoming_events_render_callback($attributes)
 					</ul>
 					<form action="" method="get" class="fno-upcoming-events__event-search">
 						<span class="fno-upcoming-events__search-icon"><i class="fa-solid fa-magnifying-glass search-icon dashicons dashicons-search"></i></span>
-						<input type="text" name="upcoming-events" placeholder="Search..." value="<?php echo $searched_items; ?>">
+						<input type="text" name="upcoming-events" placeholder="Search..." value="<?php echo esc_attr($searched_items); ?>">
+						<?php wp_nonce_field('fno_upcoming_events_nonce', 'fno_nonce'); ?>
 					</form>
 				</div>
 				<div class="fno-upcoming-events__events-card-wrapper">

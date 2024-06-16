@@ -128,6 +128,16 @@ export default function Edit(props) {
         setAttributes({ sliderMode: true });
     };
 
+    // Truncate text to a specified number of words
+    function truncateText(text, wordLimit) {
+        if (!text) return '';
+        const words = text.split(' ');
+        if (words.length > wordLimit) {
+            return words.slice(0, wordLimit).join(' ') + '...';
+        }
+        return text;
+    }
+
 
     return (
         <Fragment>
@@ -286,7 +296,7 @@ export default function Edit(props) {
                                     </div>
                                     <RichText
                                         tagName='p'
-                                        value={sliderCard.sliderCardDescription}
+                                        value={truncateText(sliderCard.sliderCardDescription, 25)}
                                         placeholder={__('Slider Card Description', 'fno-application-slider')}
                                         onChange={(value) => updateSliderCard(index, { sliderCardDescription: value })}
                                         className='fno-application-slider__individual-card-description'

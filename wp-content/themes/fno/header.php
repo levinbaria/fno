@@ -4,7 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php bloginfo( 'name' ); ?></title>
-	<?php wp_head(); ?>
+	<?php
+	wp_head();
+	$header_logo = esc_url( get_option( 'fno_theme_logo' ) );
+	?>
 </head>
 <body>
 	<header class="fno-theme__header">
@@ -12,7 +15,9 @@
 			<div class="fno-theme__logo-section">
 			<div class="fno-theme__logo">
 				<a href="<?php echo site_url(); ?>">
-					<img src=<?php echo get_template_directory_uri() . '/assets/images/fno-logo.png'; ?> alt="fno-logo"/>
+					<?php if ( ! empty( $header_logo ) ) : ?>
+						<img src="<?php echo $header_logo; ?>" alt="fno-logo" width="150px" height="100px" />
+					<?php endif; ?>
 				</a>
 			</div>
 			<div class="fno-theme__logo-section-addon-functionality">
