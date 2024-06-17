@@ -224,6 +224,10 @@ span .fa-magnifying-glass {
 	width: max-content;
 }
 
+.fixed .fno-theme__nav-bar-items .sub-menu {
+	left: -30px;
+}
+
 .fno-theme__nav-bar-items .sub-menu li {
 	padding: 0 0 30px 0;
 }
@@ -534,6 +538,10 @@ ul.fno-theme__social-icons-wrapper {
 
 	.fno-theme__nav-bar-items li a {
 		font-size: 14px;
+	}
+
+	.fno-theme__nav-bar-items .sub-menu {
+		left: -30px;
 	}
 
 	.fno-theme__nav-bar-items .sub-menu li {

@@ -1,0 +1,4 @@
+/* Styling for the Editor side */
+.fno-resource-center__filter-dropdown::after {
+	display: none;
+}
