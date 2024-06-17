@@ -141,7 +141,7 @@ get_header(); ?>
 				'terms'    => $product_title,
 			),
 		),
-		'posts_per_page' => 2,
+		'posts_per_page' => 4,
 		'orderby'        => 'date',
 		'order'          => 'DESC',
 	);
