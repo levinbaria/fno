@@ -197,7 +197,7 @@ function fno_load_more_resources() {
 				<?php else : ?>
 					<div class="fno-resource-center__thumbnail">
 						<!-- Default image placeholder -->
-						<img src="<?php echo get_template_directory_uri() . '/images/default-image.jpg'; ?>" alt="Default Image">
+						<img src="<?php echo get_template_directory_uri() . '/images/fno-logo.png'; ?>" alt="Default Image">
 					</div>
 				<?php endif; ?>
 				<div class="fno-resource-center__content">
@@ -286,7 +286,7 @@ function fno_fetch_filtered_resources() {
 				<?php else : ?>
 					<div class="fno-resource-center__thumbnail">
 						<!-- Default image placeholder -->
-						<img src="<?php echo get_template_directory_uri() . '/images/default-image.jpg'; ?>" alt="Default Image">
+						<img src="<?php echo get_template_directory_uri() . '/images/fno-logo.png'; ?>" alt="Default Image">
 					</div>
 				<?php endif; ?>
 				<div class="fno-resource-center__content">

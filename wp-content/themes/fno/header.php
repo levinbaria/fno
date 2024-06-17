@@ -63,9 +63,5 @@
 		</div><!-- .fno-theme__header-wrapper -->
 	</header><!-- .fno-theme__header -->
 
-	<?php
-	// WordPress footer hook
-	wp_footer();
-	?>
 </body>
 </html>
