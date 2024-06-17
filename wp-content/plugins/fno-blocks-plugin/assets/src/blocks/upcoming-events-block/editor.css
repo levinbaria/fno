@@ -1,12 +1,13 @@
+/* Stylings for the Editor side */
 .fno-upcoming-events__individual-event-card {
-    width: 370px;
+	width: 370px;
 }
 
 .fno-upcoming-events__individual-event-title h4,
 .fno-upcoming-events__event-address p,
 .fno-upcoming-events__event-date p,
 .fno-upcoming-events__event-main-description p {
-    margin: 0;
+	margin: 0;
 }
 
 .fno-upcoming-events__event-search .search-icon {

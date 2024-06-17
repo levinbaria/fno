@@ -1,41 +1,42 @@
+/* Settings for the Editor side */
 .fno-customer-story__category-select {
-    height: 100px;
-    overflow: scroll;
+	height: 100px;
+	overflow: scroll;
 }
 
 .fno-customer-story__overlay-setting {
-    margin: 14px  auto;
+	margin: 14px  auto;
 }
 
 .fno-customer-story__heading  h4,
 .fno-customer-story__story-meta-info h4 {
-    margin: 0;
+	margin: 0;
 }
 
 .fno-customer-story__wrapper {
-    margin-bottom: 175px;
+	margin-bottom: 175px;
 }
 
 .fno-customer-story__slider-wrapper > .fno-customer-story__story-slide {
-    display: none;
+	display: none;
 }
 
 .fno-customer-story__slider-wrapper > .fno-customer-story__story-slide:first-child {
-    display: block;
+	display: block;
 }
 
 
 @media screen and (max-width:1024px) {
-    .fno-customer-story__story-short-desc { 
-        padding: 0 30px;
-    }
-    
-    .fno-customer-story__slider-summary-info {
-        padding: 35px 0;
-    }
-    
-    .fno-customer-story__slider-counting {
-        padding: 0 30px;
-    }
+	.fno-customer-story__story-short-desc { 
+		padding: 0 30px;
+	}
+	
+	.fno-customer-story__slider-summary-info {
+		padding: 35px 0;
+	}
+	
+	.fno-customer-story__slider-counting {
+		padding: 0 30px;
+	}
 
 }

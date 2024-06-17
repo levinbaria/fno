@@ -1,44 +1,44 @@
 {
-    "$schema": "https://schemas.wp.org/trunk/block.json",
-    "name": "gb-final-exercise/product-listing-block",
-    "version": "0.1.0",
-    "title": "FNO Product Listing",
-    "category": "fno-blocks-custom-category",
-    "icon": "products",
-    "description": "Product Listing based on the Categories",
-    "keywords": ["Product Listing", "Category of Product", "Products List Categories"],
-    "supports": {
-      "html": false
-    },
-    "textdomain": "fno-block",
-    "attributes": {
-      "headingStyles": {
-        "type": "object",
-        "default": {
-          "color": "",
-          "isCustomSize": false,
-          "fontSize": ""
-        }
-      },
-      "categoryDesc": {
-        "type": "string",
-        "default": ""
-      },
-      "categoryDescColor": {
-        "type": "string",
-        "default": "#000000"
-      },
-      "productCategories": {
-        "type": "array",
-        "default": []
-      },
-      "categoryBannerImage": {
-        "type": "object",
-        "default": {}
-      }
-    },
-    "editorScript": "file:./index.js",
-    "style": "file:./style-index.css",
-    "editorStyle": "file:./index.css"
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "gb-final-exercise/product-listing-block",
+	"version": "0.1.0",
+	"title": "FNO Product Listing",
+	"category": "fno-blocks-custom-category",
+	"icon": "products",
+	"description": "Product Listing based on the Categories",
+	"keywords": ["Product Listing", "Category of Product", "Products List Categories"],
+	"supports": {
+	  "html": false
+	},
+	"textdomain": "fno-block",
+	"attributes": {
+	  "headingStyles": {
+		"type": "object",
+		"default": {
+		  "color": "",
+		  "isCustomSize": false,
+		  "fontSize": ""
+		}
+	  },
+	  "categoryDesc": {
+		"type": "string",
+		"default": ""
+	  },
+	  "categoryDescColor": {
+		"type": "string",
+		"default": "#000000"
+	  },
+	  "productCategories": {
+		"type": "array",
+		"default": []
+	  },
+	  "categoryBannerImage": {
+		"type": "object",
+		"default": {}
+	  }
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"editorStyle": "file:./index.css"
 }
   

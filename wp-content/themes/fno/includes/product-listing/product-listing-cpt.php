@@ -1,6 +1,15 @@
 <?php
+/**
+ * Register Product Listing Custom Post Type and Taxonomy
+ *
+ * @package FNO_Theme
+ */
 
+ if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 function fno_theme__register_product_listing() {
+	// Labels for the Product Listing Custom Post Type.
 	$labels = array(
 		'name'               => _x( 'Product Listing', 'fno-product-listing' ),
 		'singular_name'      => _x( 'Product Listing', 'fno-product-listing' ),
@@ -15,7 +24,7 @@ function fno_theme__register_product_listing() {
 		'not_found'          => esc_html__( 'Not Found', 'fno-product-listing' ),
 		'not_found_in_trash' => esc_html__( 'Not found in Trash', 'fno-product-listing' ),
 	);
-
+	// Arguments for registering the Product Listing Custom Post Type.
 	$args = array(
 		'labels'              => $labels,
 		'hierarchical'        => false,
@@ -37,13 +46,13 @@ function fno_theme__register_product_listing() {
 		'menu_icon'           => 'dashicons-products',
 	);
 
-	// Registered Custom post type for Product Listing.
+	// Register the Product Listing Custom Post Type.
 	register_post_type(
 		'fno-product-listing',
 		$args
 	);
 
-	// Registered category taxonomy for the cpt Product Listing.
+	// Labels for the Product Categories Taxonomy.
 	$fno_product_listing_category = array(
 		'name'              => __( 'Product Categories', 'fno-product-listing' ),
 		'singular_name'     => __( 'Product Categories', 'fno-product-listing' ),
@@ -57,7 +66,7 @@ function fno_theme__register_product_listing() {
 		'new_item_name'     => __( 'New Product Categories Name', 'fno-product-listing' ),
 		'menu_name'         => __( 'Product Categories', 'fno-product-listing' ),
 	);
-
+	// Arguments for registering the Product Categories Taxonomy.
 	$args_product_listing_category = array(
 		'labels'             => $fno_product_listing_category,
 		'rewrite'            => array( 'slug' => 'product-category' ),
@@ -67,7 +76,7 @@ function fno_theme__register_product_listing() {
 		'show_in_rest'       => true,
 		'publicly_queryable' => false,
 	);
-
+	// Register the Product Categories Taxonomy.
 	register_taxonomy( 'fno_product_listing_category', 'fno-product-listing', $args_product_listing_category );
 }
 

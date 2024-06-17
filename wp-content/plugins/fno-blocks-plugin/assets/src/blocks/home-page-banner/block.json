@@ -8,58 +8,58 @@
   "description": "Static Block for the Home Page Banner",
   "keywords": ["Banner", "Homepage", "Index Page Banner"],
   "supports": {
-    "html": false
+	"html": false
   },
   "textdomain": "fno-block",
   "attributes": {
-    "bannerHeading": {
-      "type": "string",
-      "default": ""
-    },
-    "headingTag": {
-      "type": "string",
-      "default": "h1"
-    },
-    "headingColor": {
-      "type": "string",
-      "default": "#000000"
-    },
-    "isCustomHeadingSize": {
-      "type": "boolean",
-      "default": false
-    },
-    "bannerHeadingSize": {
-      "type": "number",
-      "default": 30
-    },
-    "bannerDescription": {
-      "type": "string",
-      "default": ""
-    },
-    "descriptionColor": {
-      "type": "string",
-      "default": "#000000"
-    },
-    "buttonText": {
-      "type": "string",
-      "default": "Learn More"
-    },
-    "bgImg": {
-      "type": "object",
-      "default": {}
-    },
-    "showBgOverlay": {
-      "type": "boolean",
-      "default": false
-    },
-    "bgOverlayColor": {
-      "type": "string",
-      "default": ""
-    },
-    "bgOverlayOpacity": {
-      "type": "number",
-      "default": 0.8
-    }
+	"bannerHeading": {
+	  "type": "string",
+	  "default": ""
+	},
+	"headingTag": {
+	  "type": "string",
+	  "default": "h1"
+	},
+	"headingColor": {
+	  "type": "string",
+	  "default": "#000000"
+	},
+	"isCustomHeadingSize": {
+	  "type": "boolean",
+	  "default": false
+	},
+	"bannerHeadingSize": {
+	  "type": "number",
+	  "default": 30
+	},
+	"bannerDescription": {
+	  "type": "string",
+	  "default": ""
+	},
+	"descriptionColor": {
+	  "type": "string",
+	  "default": "#000000"
+	},
+	"buttonText": {
+	  "type": "string",
+	  "default": "Learn More"
+	},
+	"bgImg": {
+	  "type": "object",
+	  "default": {}
+	},
+	"showBgOverlay": {
+	  "type": "boolean",
+	  "default": false
+	},
+	"bgOverlayColor": {
+	  "type": "string",
+	  "default": ""
+	},
+	"bgOverlayOpacity": {
+	  "type": "number",
+	  "default": 0.8
+	}
   },
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",

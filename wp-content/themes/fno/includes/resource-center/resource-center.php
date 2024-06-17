@@ -1,7 +1,20 @@
 <?php
+/**
+ * Register Custom Post Type and Taxonomies for Resource Center.
+ *
+ * @package FNO_Theme
+ */
 
+// Prevent direct access.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Register Resource Center custom post type and associated taxonomies.
+ */
 function fno_theme_register_resource_center() {
-
+	// Labels for the Resource Center custom post type..
 	$labels = array(
 		'name'               => _x( 'Resource Center', 'fno-resource-center' ),
 		'singular_name'      => _x( 'Resource Center', 'fno-resource-center' ),
@@ -17,6 +30,7 @@ function fno_theme_register_resource_center() {
 		'not_found_in_trash' => esc_html__( 'Not found in Trash', 'fno-resource-center' ),
 	);
 
+	// Arguments for the Resource Center custom post type.
 	$args = array(
 		'labels'              => $labels,
 		'hierarchical'        => false,
@@ -39,13 +53,13 @@ function fno_theme_register_resource_center() {
 		'menu_icon'           => 'dashicons-admin-links',
 	);
 
-	// Registered CPT for the Resource Center.
+	// Register the Resource Center custom post type.
 	register_post_type(
 		'fno-resource-center',
 		$args
 	);
 
-	// Registered Resource type taxonomy for the cpt Resource Center.
+	// Labels for Resource Type taxonomy.
 	$fno_resource_center_type = array(
 		'name'              => esc_html__( 'Resource Type', 'fno-resource-center' ),
 		'singular_name'     => esc_html__( 'Resource Type', 'fno-resource-center' ),
@@ -60,6 +74,7 @@ function fno_theme_register_resource_center() {
 		'menu_name'         => esc_html__( 'Resource Type', 'fno-resource-center' ),
 	);
 
+	// Arguments for Resource Type taxonomy.
 	$args_resource_center_type = array(
 		'labels'             => $fno_resource_center_type,
 		'rewrite'            => array( 'slug' => 'resource-type' ),
@@ -69,10 +84,10 @@ function fno_theme_register_resource_center() {
 		'show_in_rest'       => true,
 		'publicly_queryable' => false,
 	);
-
+	// Register the Resource Type Taxonomy.
 	register_taxonomy( 'fno_resource_type', 'fno-resource-center', $args_resource_center_type );
 
-	// Registered Product Categories taxonomy for the cpt Resource Center.
+	// Labels for the Resource Product Category Taxonomy.
 	$fno_resource_center_product_category = array(
 		'name'              => esc_html__( 'Resource Product Category', 'fno-resource-center' ),
 		'singular_name'     => esc_html__( 'Resource Product Category', 'fno-resource-center' ),
@@ -86,7 +101,7 @@ function fno_theme_register_resource_center() {
 		'new_item_name'     => esc_html__( 'New Resource Product Category Name', 'fno-resource-center' ),
 		'menu_name'         => esc_html__( 'Resource Product Category', 'fno-resource-center' ),
 	);
-
+	// Arguments for registering the Resource Product Category Taxonomy.
 	$args_resource_center_product_category = array(
 		'labels'             => $fno_resource_center_product_category,
 		'rewrite'            => array( 'slug' => 'resource-product-category' ),
@@ -96,10 +111,10 @@ function fno_theme_register_resource_center() {
 		'show_in_rest'       => true,
 		'publicly_queryable' => false,
 	);
-
+	// Register the Resource Product Category Taxonomy.
 	register_taxonomy( 'fno_resource_product_category', 'fno-resource-center', $args_resource_center_product_category );
 
-	// Registered Product  taxonomy for the cpt Resource Center.
+	// Labels for the Resource Products Taxonomy.
 	$fno_resource_center_product = array(
 		'name'              => esc_html__( 'Resource Products', 'fno-resource-center' ),
 		'singular_name'     => esc_html__( 'Resource Products', 'fno-resource-center' ),
@@ -113,7 +128,7 @@ function fno_theme_register_resource_center() {
 		'new_item_name'     => esc_html__( 'New Resource Products Name', 'fno-resource-center' ),
 		'menu_name'         => esc_html__( 'Resource Products', 'fno-resource-center' ),
 	);
-
+	// Arguments for registering the Resource Products Taxonomy.
 	$args_resource_center_product = array(
 		'labels'             => $fno_resource_center_product,
 		'rewrite'            => array( 'slug' => 'resource-products' ),
@@ -123,7 +138,7 @@ function fno_theme_register_resource_center() {
 		'show_in_rest'       => true,
 		'publicly_queryable' => false,
 	);
-
+	// Register the Resource Products Taxonomy.
 	register_taxonomy( 'fno_resource_products', 'fno-resource-center', $args_resource_center_product );
 }
 

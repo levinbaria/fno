@@ -1,24 +1,21 @@
+/* Styling at the Editor Side */
 .fno-application-slider__card-modifications {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	margin-bottom: 6px;
 }
 
 button.components-button.is-button.is-destructive {
-    width: max-content;
-    padding: 10px;
+	width: max-content;
+	padding: 10px;
 }
 
-/* .fno-application-slider__add-slider-btn {
-    cursor: pointer;
-} */
-
 .fno-application-slider__slider-customizer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 i.dashicons.dashicons-no-alt::before,
@@ -26,9 +23,9 @@ i.dashicons.dashicons-edit::before,
 i.dashicons.dashicons-plus-alt::before,
 i.dashicons.dashicons-saved::before,
 i.dashicons.dashicons-admin-customizer::before {
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
+	font-size: 30px;
+	color: white;
+	cursor: pointer;
 }
 
 i.dashicons.dashicons-no-alt,
@@ -36,28 +33,26 @@ i.dashicons.dashicons-edit,
 i.dashicons.dashicons-plus-alt,
 i.dashicons.dashicons-saved,
 i.dashicons.dashicons-admin-customizer {
-    width: max-content;
-    height: auto;
-    background-color: black;
-    border-radius: 30px;
-    cursor: pointer;
+	width: max-content;
+	height: auto;
+	background-color: black;
+	border-radius: 30px;
+	cursor: pointer;
 }
 
 .fno-application-slider__edit-mode-on {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3.5rem;
-    margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 3.5rem;
+	margin-top: 2rem;
 }
 
 .slick-next,
 .slick-prev {
-    top: 35% !important;
+	top: 35% !important;
 }
 
 .slick-prev {
-    left: 0 !important;
+	left: 0 !important;
 }
-
-

@@ -66,11 +66,13 @@ function Edit(props) {
     pauseOnHover,
     autoplaySpeed
   } = attributes;
+  // State for the Categories selection.
   const [categories, setCategories] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useState)([]);
   const [selectedCategories, setSelectedCategories] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useState)(storyCategories || []);
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.useBlockProps)({
     className: 'fno-customer-story'
   });
+  // Initial Rendering of the Categories of the Customer Story.
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useEffect)(() => {
     _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_6___default()({
       path: 'wp/v2/fno_customer_story_category'
@@ -78,6 +80,7 @@ function Edit(props) {
       setCategories(stories);
     });
   }, []);
+  // Function to toggle the selected Categories and saving it in the attributes.
   const toggleStoryCategory = categoryId => {
     const updatedSelectedCategories = selectedCategories.includes(categoryId) ? selectedCategories.filter(id => id !== categoryId) : [...selectedCategories, categoryId];
     setSelectedCategories(updatedSelectedCategories);

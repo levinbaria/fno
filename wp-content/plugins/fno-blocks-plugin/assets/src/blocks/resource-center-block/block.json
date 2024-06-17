@@ -1,36 +1,36 @@
 {
-    "$schema": "https://schemas.wp.org/trunk/block.json",
-    "name": "gb-final-exercise/resource-center-block",
-    "version": "0.1.0",
-    "title": "FNO Resource Center",
-    "category": "fno-blocks-custom-category",
-    "icon": "lightbulb",
-    "description": "Resource Center based on the Categories filter",
-    "keywords": ["Resource Center", "Resources", "Categories based resources"],
-    "supports": {
-      "html": false
-    },
-    "textdomain": "fno-block",
-    "attributes": {
-      "headingStyles": {
-        "type": "object",
-        "default": {
-          "color": "",
-          "isCustomSize": false,
-          "fontSize": ""
-        }
-      },
-      "description": {
-        "type": "string",
-        "default": ""
-      },
-      "descriptionColor": {
-        "type": "string",
-        "default": "#000000"
-      }
-    },
-    "editorScript": "file:./index.js",
-    "style": "file:./style-index.css",
-    "editorStyle": "file:./index.css"
+		"$schema": "https://schemas.wp.org/trunk/block.json",
+		"name": "gb-final-exercise/resource-center-block",
+		"version": "0.1.0",
+		"title": "FNO Resource Center",
+		"category": "fno-blocks-custom-category",
+		"icon": "lightbulb",
+		"description": "Resource Center based on the Categories filter",
+		"keywords": ["Resource Center", "Resources", "Categories based resources"],
+		"supports": {
+			"html": false
+		},
+		"textdomain": "fno-block",
+		"attributes": {
+			"headingStyles": {
+				"type": "object",
+				"default": {
+					"color": "",
+					"isCustomSize": false,
+					"fontSize": ""
+				}
+			},
+			"description": {
+				"type": "string",
+				"default": ""
+			},
+			"descriptionColor": {
+				"type": "string",
+				"default": "#000000"
+			}
+		},
+		"editorScript": "file:./index.js",
+		"style": "file:./style-index.css",
+		"editorStyle": "file:./index.css"
 }
-  
+	

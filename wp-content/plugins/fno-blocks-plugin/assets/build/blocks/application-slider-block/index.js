@@ -75,6 +75,8 @@ function Edit(props) {
     showDots
   } = attributes;
   const [editMode, setEditMode] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.useState)(sliderMode);
+
+  // Styling Object for the Heading and Description.
   const applicationHeadingStyle = {};
   applicationHeadingSize && isCustomHeadingSize && (applicationHeadingStyle.fontSize = applicationHeadingSize + 'px');
   applicationHeadingColor && (applicationHeadingStyle.color = applicationHeadingColor);
@@ -116,6 +118,8 @@ function Edit(props) {
       sliderCards: newSliderCards
     });
   };
+
+  // UseEffect to be render when the slider attributes changed evry time.
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.useEffect)(() => {
     if (!editMode) {
       const $ = jQuery;
@@ -162,16 +166,6 @@ function Edit(props) {
       sliderMode: true
     });
   };
-
-  // Truncate text to a specified number of words
-  function truncateText(text, wordLimit) {
-    if (!text) return '';
-    const words = text.split(' ');
-    if (words.length > wordLimit) {
-      return words.slice(0, wordLimit).join(' ') + '...';
-    }
-    return text;
-  }
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_4__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Application Heading Settings', 'fno-application-slider'),
     initialOpen: false
@@ -352,8 +346,8 @@ function Edit(props) {
     className: "fno-application-slider__individual-card-title"
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     tagName: "p",
-    value: truncateText(sliderCard.sliderCardDescription, 25),
-    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Card Description', 'fno-application-slider'),
+    value: sliderCard.sliderCardDescription,
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Card Description (max. 25 words)', 'fno-application-slider'),
     onChange: value => updateSliderCard(index, {
       sliderCardDescription: value
     }),
@@ -428,8 +422,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
 
 /**
  * Retrieves the translation of text.
@@ -445,11 +437,9 @@ __webpack_require__.r(__webpack_exports__);
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
 
-
 function Save(props) {
   const {
-    attributes,
-    setAttributes
+    attributes
   } = props;
   const {
     applicationHeading,
@@ -472,6 +462,8 @@ function Save(props) {
   applicationHeadingColor && (applicationHeadingStyle.color = applicationHeadingColor);
   const applicationDescStyle = {};
   applicationDescriptionColor && (applicationDescStyle.color = applicationDescriptionColor);
+
+  // Data Attributes to store the Slider Values.
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps.save({
     className: 'fno-application-slider',
     'data-auto-play': autoPlay,
@@ -481,19 +473,20 @@ function Save(props) {
     'data-show-dots': showDots,
     'data-auto-play-speed': autoplaySpeed
   });
+
+  // If all the details are there for the slider card then it will be shown, otherwise not.
   const validSliderCards = sliderCards.filter(({
     sliderCardImg,
     sliderCardTitle,
     sliderCardDescription
   }) => sliderCardImg?.url && sliderCardTitle && sliderCardDescription);
-  function truncateText(text, wordLimit) {
+
+  // Function to truncate text
+  const truncateText = (text, maxLength = 150) => {
     if (!text) return '';
-    const words = text.split(' ');
-    if (words.length > wordLimit) {
-      return words.slice(0, wordLimit).join(' ') + '...';
-    }
-    return text;
-  }
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength) + '...';
+  };
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...blockProps
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
@@ -536,7 +529,7 @@ function Save(props) {
     class: "total-slides"
   }, "04"))), sliderCard.sliderCardDescription && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
     tagName: "p",
-    value: truncateText(sliderCard.sliderCardDescription, 25),
+    value: truncateText(sliderCard.sliderCardDescription),
     className: "fno-application-slider__individual-card-description"
   })))))));
 }

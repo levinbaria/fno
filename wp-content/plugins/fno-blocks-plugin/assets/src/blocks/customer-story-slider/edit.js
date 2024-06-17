@@ -34,21 +34,21 @@ export default function Edit(props) {
 		pauseOnHover,
 		autoplaySpeed
 	} = attributes;
-
+	// State for the Categories selection.
 	const [categories, setCategories] = useState([]);
 	const [selectedCategories, setSelectedCategories] = useState(storyCategories || []);
 
 	const blockProps = useBlockProps({
 		className: 'fno-customer-story',
 	});
-
+	// Initial Rendering of the Categories of the Customer Story.
 	useEffect(() => {
 		apiFetch({ path: 'wp/v2/fno_customer_story_category' })
 			.then(stories => {
 				setCategories(stories);
 			});
 	}, []);
-
+	// Function to toggle the selected Categories and saving it in the attributes.
 	const toggleStoryCategory = (categoryId) => {
 		const updatedSelectedCategories = selectedCategories.includes(categoryId) ?
 			selectedCategories.filter(id => id !== categoryId) :
@@ -61,7 +61,9 @@ export default function Edit(props) {
 
 	return (
 		<Fragment>
+			{/* Sider Bar settings */}
 			<InspectorControls>
+				{/* Categorie selection settings */}
 				<PanelBody title={__('Story Cateory Select', 'fno-customer-story')} initialOpen={true}>
 					<div className='fno-customer-story__category-select'>
 						{categories.length === 0 ? (
@@ -80,6 +82,7 @@ export default function Edit(props) {
 						)}
 					</div>
 				</PanelBody>
+				{/* Backgroung Image Settings */}
 				<PanelBody title={__('Story Background Setting', 'fno-banner')} initialOpen={true}>
 					<div className='fno-customer-story__background-setting'>
 						<div className='fno-customer-story__background-image-preview'>
@@ -143,6 +146,7 @@ export default function Edit(props) {
 						)}
 					</div>
 				</PanelBody>
+				{/* Slider Settings */}
 				<PanelBody title={__('Slider Settings', 'fno-customer-story')} initialOpen={true}>
 					<ToggleControl
 						label={__('Autoplay', 'fno-customer-story')}

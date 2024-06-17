@@ -27,102 +27,106 @@ import metadata from './block.json';
 
 export default function Edit(props) {
 
-    const { attributes, setAttributes } = props;
+	const { attributes, setAttributes } = props;
 
-    const {
-        headingStyles,
-        description,
-        descriptionColor,
-        eventsBannerImage,
-        // eventsCategories
-    } = attributes;
-
-
-    const blockProps = useBlockProps({
-        className: 'fno-upcoming-events'
-    });
-
-    const onSelectImage = (media) => {
-        setAttributes({ eventsBannerImage: { url: media.url, id: media.id } });
-    };
-
-    const removeImage = () => {
-        setAttributes({ eventsBannerImage: {} });
-    };
+	const {
+		headingStyles,
+		description,
+		descriptionColor,
+		eventsBannerImage,
+		// eventsCategories
+	} = attributes;
 
 
-    const headingStyle = {
-        ...headingStyles
-    };
+	const blockProps = useBlockProps({
+		className: 'fno-upcoming-events'
+	});
+	// Banner Image selection function.
+	const onSelectImage = (media) => {
+		setAttributes({ eventsBannerImage: { url: media.url, id: media.id } });
+	};
 
-    const descStyle = {
-        color: descriptionColor
-    };
+	const removeImage = () => {
+		setAttributes({ eventsBannerImage: {} });
+	};
 
-    return (
-        <Fragment>
-            <InspectorControls>
-                <PanelBody title={__('Events Banner Image', 'fno-upcoming-events')} initialOpen={true}>
-                    <MediaUploadCheck>
-                        <MediaUpload
-                            onSelect={onSelectImage}
-                            allowedTypes={['image']}
-                            value={eventsBannerImage.id}
-                            render={({ open }) => (
-                                <>
-                                    <Button onClick={open} variant='primary'>
-                                        {eventsBannerImage.url ? __('Replace Image', 'fno-upcoming-events') : __('Upload Image', 'fno-upcoming-events')}
-                                    </Button>
-                                    {eventsBannerImage.url && (
-                                        <Button onClick={removeImage} isDestructive>
-                                            {__('Remove Image', 'fno-upcoming-events')}
-                                        </Button>
-                                    )}
-                                </>
-                            )}
-                        />
-                    </MediaUploadCheck>
-                </PanelBody>
-                <PanelBody title={__('Heading Settings', 'fno-upcoming-events')} initialOpen={false}>
-                    <ColorPalette
-                        label={__('Heading Color', 'fno-upcoming-events')}
-                        value={headingStyles.color}
-                        onChange={(color) => setAttributes({ headingStyles: { ...headingStyles, color } })}
-                    />
-                    <ToggleControl
-                        label={__('Resize Heading?', 'fno-upcoming-events')}
-                        checked={headingStyles.isCustomSize}
-                        onChange={(isCustomSize) => setAttributes({ headingStyles: { ...headingStyles, isCustomSize } })}
-                    />
-                    {headingStyles.isCustomSize && (
-                        <TextControl
-                            type="number"
-                            label={__('Heading Font size', 'fno-upcoming-events')}
-                            value={headingStyles.fontSize}
-                            onChange={(fontSize) => setAttributes({ headingStyles: { ...headingStyles, fontSize: parseInt(fontSize) } })}
-                        />
-                    )}
-                </PanelBody>
-                <PanelBody title={__('Description Setting', 'fno-upcoming-events')} initialOpen={false}>
-                    <TextareaControl
-                        label={__('Description Text', 'fno-upcoming-events')}
-                        help={__('Enter Description', 'fno-upcoming-events')}
-                        value={description}
-                        onChange={(description) => setAttributes({ description })}
-                    />
-                    <ColorPalette
-                        label={__('Description Color', 'fno-upcoming-events')}
-                        value={descriptionColor}
-                        onChange={(descriptionColor) => setAttributes({ descriptionColor })}
-                    />
-                </PanelBody>
-            </InspectorControls>
-            <div {...blockProps}>
-                <ServerSideRender
-                    block={metadata.name}
-                    attributes={attributes}
-                />
-            </div>
-        </Fragment>
-    );
+
+	const headingStyle = {
+		...headingStyles
+	};
+
+	const descStyle = {
+		color: descriptionColor
+	};
+
+	return (
+		<Fragment>
+			<InspectorControls>
+				{/* Banner Image setting */}
+				<PanelBody title={__('Events Banner Image', 'fno-upcoming-events')} initialOpen={true}>
+					<MediaUploadCheck>
+						<MediaUpload
+							onSelect={onSelectImage}
+							allowedTypes={['image']}
+							value={eventsBannerImage.id}
+							render={({ open }) => (
+								<>
+									<Button onClick={open} variant='primary'>
+										{eventsBannerImage.url ? __('Replace Image', 'fno-upcoming-events') : __('Upload Image', 'fno-upcoming-events')}
+									</Button>
+									{eventsBannerImage.url && (
+										<Button onClick={removeImage} isDestructive>
+											{__('Remove Image', 'fno-upcoming-events')}
+										</Button>
+									)}
+								</>
+							)}
+						/>
+					</MediaUploadCheck>
+				</PanelBody>
+				{/* Heading Settings */}
+				<PanelBody title={__('Heading Settings', 'fno-upcoming-events')} initialOpen={false}>
+					<ColorPalette
+						label={__('Heading Color', 'fno-upcoming-events')}
+						value={headingStyles.color}
+						onChange={(color) => setAttributes({ headingStyles: { ...headingStyles, color } })}
+					/>
+					<ToggleControl
+						label={__('Resize Heading?', 'fno-upcoming-events')}
+						checked={headingStyles.isCustomSize}
+						onChange={(isCustomSize) => setAttributes({ headingStyles: { ...headingStyles, isCustomSize } })}
+					/>
+					{headingStyles.isCustomSize && (
+						<TextControl
+							type="number"
+							label={__('Heading Font size', 'fno-upcoming-events')}
+							value={headingStyles.fontSize}
+							onChange={(fontSize) => setAttributes({ headingStyles: { ...headingStyles, fontSize: parseInt(fontSize) } })}
+						/>
+					)}
+				</PanelBody>
+				{/* Description settings */}
+				<PanelBody title={__('Description Setting', 'fno-upcoming-events')} initialOpen={false}>
+					<TextareaControl
+						label={__('Description Text', 'fno-upcoming-events')}
+						help={__('Enter Description', 'fno-upcoming-events')}
+						value={description}
+						onChange={(description) => setAttributes({ description })}
+					/>
+					<ColorPalette
+						label={__('Description Color', 'fno-upcoming-events')}
+						value={descriptionColor}
+						onChange={(descriptionColor) => setAttributes({ descriptionColor })}
+					/>
+				</PanelBody>
+			</InspectorControls>
+			<div {...blockProps}>
+				{/* Server side render for the attributes */}
+				<ServerSideRender
+					block={metadata.name}
+					attributes={attributes}
+				/>
+			</div>
+		</Fragment>
+	);
 }

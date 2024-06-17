@@ -1,5 +1,14 @@
 <?php
+/**
+ * Footer template.
+ *
+ * @package FNO_Theme
+ */
+defined( 'ABSPATH' ) || exit;
+// Enqueue necessary scripts and styles.
 wp_footer();
+
+// Retrieve theme options.
 $footer_logo    = esc_url( get_option( 'fno_theme_logo' ) );
 $short_desc     = esc_html( get_option( 'fno_theme_short_description' ) );
 $social_links   = get_option( 'fno_theme_social_links', array() );

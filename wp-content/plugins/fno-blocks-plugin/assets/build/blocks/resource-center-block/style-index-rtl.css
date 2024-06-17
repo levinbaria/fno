@@ -5,13 +5,13 @@
 	--font-family-1: 'Urbanist', sans-serif;
 	--font-family-2: 'be_vietnam_proregular', sans-serif;
 }
-
+/* Main Rescource center page stylings */
 main.fno-resource-center__main-container {
 	width: 100%;
 	background-color: rgb(243, 244, 246, 0.2);
 	opacity: 0.902;
 }
-
+/* Rescoruce center section stylings */
 section.fno-resource-center__resource-section {
 	max-width: 1240px;
 	padding: 0 20px 50px;
@@ -20,7 +20,7 @@ section.fno-resource-center__resource-section {
 	flex-direction: column;
 	justify-content: center;
 }
-
+/* Header related stylings */
 .fno-resource-center__resource-center-header {
 	display: flex;
 	flex-direction: column;
@@ -59,7 +59,7 @@ section.fno-resource-center__resource-section {
 .fno-resource-center__filter-dropdown {
 	position: relative;
 }
-
+/* Drop down stylings */
 .fno-resource-center__filter-dropdown select {
 	padding: 15px 15px 15px 145px;
 	border: 2px solid #707070;
@@ -92,7 +92,7 @@ section.fno-resource-center__resource-section {
 	color: black;
 	font-weight: 900;
 }
-
+/* Results data stylings */
 .fno-resource-center__results-info {
 	display: flex;
 	align-items: center;
@@ -122,11 +122,11 @@ section.fno-resource-center__resource-section {
 	font-family: var(--font-family-2);
 	cursor: pointer;
 }
-
+/* Fetched post related stylings */
 .fno-resource-center__resources {
 	padding: 0 100px;
 }
-
+/* Lates and All Resources conatiner styling */
 .fno-resource-center__latest-resources,
 .fno-resource-center__all-resources {
 	margin: 0 0 80px;
@@ -140,7 +140,7 @@ section.fno-resource-center__resource-section {
 	font-family: var(--font-family-1);
 	margin: 0 0 80px;
 }
-
+/* Indivisualpost stylings */
 .fno-resource-center__resource-item {
 	display: flex;
 	gap: 28px;
@@ -185,8 +185,7 @@ section.fno-resource-center__resource-section {
 	display: flex;
 	justify-content: center;
 }
-
-
+/* Load more Button Styling */
 .fno-resource-center__load-more button {
 	margin: auto 0 0;
 	width: -moz-max-content;
@@ -221,9 +220,7 @@ section.fno-resource-center__resource-section {
 	background-image: linear-gradient(-90deg, #00153f 0%, #0069c1 100%);
 	color: white;
 }
-
-
-
+/* Media Queries */
 @media screen and (max-width:1024px) {
 
 	main.fno-resource-center__main-container {
@@ -280,17 +277,6 @@ section.fno-resource-center__resource-section {
 		height: 300px;
 	}
 
-	/* .fno-resource-center__content {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	} */
-
-	.fno-resource-center__content p {
-		/* text-align: center; */
-	}
-
 	.fno-resource-center__content h4 {
 		display: flex;
 		flex-direction: column;
@@ -302,7 +288,6 @@ section.fno-resource-center__resource-section {
 		width: -moz-max-content;
 		width: max-content;
 	}
-
 }
 
 @media screen and (max-width:475px) {
@@ -319,5 +304,4 @@ section.fno-resource-center__resource-section {
 	.fno-resource-center__content h4 {
 		font-size: 18px;
 	}
-
 }

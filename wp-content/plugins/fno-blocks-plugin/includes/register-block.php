@@ -56,4 +56,4 @@ function fno_blocks_register_blocks() {
 		);
 	}
 }
-add_action( 'init', 'fno_blocks_register_blocks', );
+add_action( 'init', 'fno_blocks_register_blocks' );

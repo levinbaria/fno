@@ -11,6 +11,6 @@ import Save from './save';
 import './style.css';
 
 registerBlockType(metadata, {
-    edit: Edit,
-    save: Save
+	edit: Edit,
+	save: Save
 });

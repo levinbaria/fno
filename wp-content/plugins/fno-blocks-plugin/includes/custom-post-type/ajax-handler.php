@@ -1,7 +1,12 @@
 <?php
+/**
+ * Fetches events by category via AJAX.
+ */
 function fno_fetch_events_by_category() {
+	// Verify AJAX nonce for security.
 	check_ajax_referer( 'fno_upcoming_events_nonce', 'nonce' );
 
+	// Get category ID and search query from POST data.
 	$category_id  = isset( $_POST['category_id'] ) ? intval( $_POST['category_id'] ) : 0;
 	$search_query = isset( $_POST['search_query'] ) ? sanitize_text_field( $_POST['search_query'] ) : '';
 
@@ -47,12 +52,12 @@ function fno_fetch_events_by_category() {
 	}
 
 	$posts = new WP_Query( $query_args );
-
+	// Render HTML for events.
 	$html = render_events_cards( $posts );
 
 	wp_send_json_success( $html );
 }
-
+// Hook the AJAX action for fetching events by category
 add_action( 'wp_ajax_fno_fetch_events_by_category', 'fno_fetch_events_by_category' );
 add_action( 'wp_ajax_nopriv_fno_fetch_events_by_category', 'fno_fetch_events_by_category' );
 
@@ -65,6 +70,7 @@ add_action( 'wp_ajax_nopriv_fno_fetch_events_by_category', 'fno_fetch_events_by_
  */
 function render_events_cards( $posts ) {
 	ob_start();
+	// Get current date.
 	$current_date        = new DateTime( current_time( 'Y-m-d' ) );
 	$has_upcoming_events = false;
 
@@ -318,9 +324,6 @@ function fno_fetch_filtered_resources() {
 		);
 	}
 }
-
-
 add_action( 'wp_ajax_fno_fetch_filtered_resources', 'fno_fetch_filtered_resources' );
 add_action( 'wp_ajax_nopriv_fno_fetch_filtered_resources', 'fno_fetch_filtered_resources' );
-
 ?>

@@ -71,6 +71,7 @@ function Edit(props) {
     bgOverlayColor,
     bgOverlayOpacity
   } = attributes;
+  // Object for the styling.
   const bannerStyle = {};
   bgImg.url && (bannerStyle.backgroundImage = 'url(' + bgImg.url + ')');
   const bannerHeadingStyle = {};
@@ -364,6 +365,8 @@ function Save(props) {
     bgOverlayColor,
     bgOverlayOpacity
   } = attributes;
+
+  // Styling object for the background, heading and descriptions.
   const bannerStyle = {};
   bgImg.url && (bannerStyle.backgroundImage = 'url(' + bgImg.url + ')');
   const bannerHeadingStyle = {};
@@ -378,40 +381,43 @@ function Save(props) {
     className: 'fno-banner-block',
     style: bannerStyle
   });
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    ...blockProps
-  }, showBgOverlay && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    style: bannerOverlayStyle,
-    className: "fno-banner-block__overlay"
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "fno-banner-block__wrapper"
-  }, bannerHeading && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
-    tagName: headingTag,
-    value: bannerHeading,
-    className: "fno-banner-block__banner-heading",
-    style: bannerHeadingStyle
-  }), bannerDescription && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
-    tagName: "p",
-    value: bannerDescription,
-    className: "fno-banner-block__banner-description",
-    style: bannerDescStyle
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "fno-banner-block__btn-wrapper"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-    className: "fno-banner-block__banner-btn"
-  }, buttonText || (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Learn More', 'fno-banner')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
-    width: "20px",
-    height: "20px",
-    viewBox: "0 0 24 24",
-    fill: "none",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
-    d: "M4 12H20M20 12L16 8M20 12L16 16",
-    stroke: "#ffffff",
-    "stroke-width": "2",
-    "stroke-linecap": "round",
-    "stroke-linejoin": "round"
-  })))));
+  return (
+    // Main Block Container
+    (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      ...blockProps
+    }, showBgOverlay && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      style: bannerOverlayStyle,
+      className: "fno-banner-block__overlay"
+    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "fno-banner-block__wrapper"
+    }, bannerHeading && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
+      tagName: headingTag,
+      value: bannerHeading,
+      className: "fno-banner-block__banner-heading",
+      style: bannerHeadingStyle
+    }), bannerDescription && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
+      tagName: "p",
+      value: bannerDescription,
+      className: "fno-banner-block__banner-description",
+      style: bannerDescStyle
+    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "fno-banner-block__btn-wrapper"
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
+      className: "fno-banner-block__banner-btn"
+    }, buttonText || (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Learn More', 'fno-banner')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+      width: "20px",
+      height: "20px",
+      viewBox: "0 0 24 24",
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+      d: "M4 12H20M20 12L16 8M20 12L16 16",
+      stroke: "#ffffff",
+      "stroke-width": "2",
+      "stroke-linecap": "round",
+      "stroke-linejoin": "round"
+    })))))
+  );
 }
 
 /***/ }),

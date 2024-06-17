@@ -66,11 +66,15 @@ function Edit(props) {
     productCategories,
     categoryBannerImage
   } = attributes;
+
+  // State to select the categories of the Product.
   const [categories, setCategories] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useState)([]);
   const [selectedCategories, setSelectedCategories] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useState)(productCategories || []);
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.useBlockProps)({
     className: 'fno-product-listing'
   });
+
+  // Function for the Banner image.
   const onSelectImage = media => {
     setAttributes({
       categoryBannerImage: {
@@ -84,6 +88,8 @@ function Edit(props) {
       categoryBannerImage: {}
     });
   };
+
+  // Initial Render of the Product Listing Category.
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useEffect)(() => {
     _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_6___default()({
       path: 'wp/v2/fno_product_listing_category'
@@ -91,6 +97,8 @@ function Edit(props) {
       setCategories(categories);
     });
   }, []);
+
+  // Function to toggle the categories selcted.
   const toggleCategory = categoryId => {
     const updatedSelectedCategories = selectedCategories.includes(categoryId) ? selectedCategories.filter(id => id !== categoryId) : [...selectedCategories, categoryId];
     setSelectedCategories(updatedSelectedCategories);

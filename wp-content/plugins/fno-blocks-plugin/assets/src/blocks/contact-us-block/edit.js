@@ -29,7 +29,7 @@ import './editor.css';
 
 export default function Edit(props) {
 	const { attributes, setAttributes } = props
-
+	// Destructuring attributes.
 	const {
 		contactHeading,
 		contactHeadingTag,
@@ -51,7 +51,7 @@ export default function Edit(props) {
 		country,
 		comment
 	} = attributes;
-
+	// Object for the Stylings.
 	const contactHeadingStyle = {};
 	(contactHeadingSize && isCustomHeadingSize) && (contactHeadingStyle.fontSize = contactHeadingSize + 'px');
 	contactHeadingColor && (contactHeadingStyle.color = contactHeadingColor);
@@ -73,6 +73,7 @@ export default function Edit(props) {
 		<Fragment>
 			{/* SiderBar settings for the Contact Us Block */}
 			<InspectorControls>
+				{/* Heading Settings */}
 				<PanelBody title={__('Contact Heading Settings', 'fno-contact-us-block')} initialOpen={false}>
 					<SelectControl
 						label={__('Heading Tag', 'fno-contact-us-block')}
@@ -106,13 +107,15 @@ export default function Edit(props) {
 						/>
 					)}
 				</PanelBody>
-				<PanelBody title='contact Description Settings' initialOpen={false}>
+				{/* Description Settings */}
+				<PanelBody title='Contact Description Settings' initialOpen={false}>
 					<ColorPalette
 						label={__('Description Color', 'fno-contact-us-block')}
 						value={contactDescriptionColor}
 						onChange={(contactDescriptionColor) => setAttributes({ contactDescriptionColor })}
 					/>
 				</PanelBody>
+				{/* Image Oevrlay Settings */}
 				<PanelBody title={__('Image Overlay Settings', 'fno-contact-us-block')}>
 					<ToggleControl
 						label={__('Show Image Overlay', 'fno-contact-us-block')}
@@ -137,9 +140,13 @@ export default function Edit(props) {
 					)}
 				</PanelBody>
 			</InspectorControls>
+			{/* Main Conatiner for the Block */}
 			<div {...blockProps}>
+				{/* Section for theConatc Us Block */}
 				<section className='fno-contact-us-block__main-container'>
+					{/* Main Conatiner for the Contact Us */}
 					<div className='fno-contact-us-block__contact-us-wrapper'>
+						{/* Header container */}
 						<div className='fno-contact-us-block__contact-us-header'>
 							<RichText
 								tagName={contactHeadingTag}
@@ -158,7 +165,9 @@ export default function Edit(props) {
 								onChange={(contactDescription) => setAttributes({ contactDescription })}
 							/>
 						</div>
+						{/* Conatct Us Card Conatiner */}
 						<div className='fno-contact-us-block__hero-contact-us-card-wrapper'>
+							{/* Image Conatiner */}
 							<div className='fno-contact-us-block__contact-us-hero-img'>
 								<img
 									src={contactImg.url}
@@ -226,6 +235,7 @@ export default function Edit(props) {
 									</MediaUploadCheck>
 								)}
 							</div>
+							{/* Contact Us Form Container */}
 							<div className='fno-contact-us-block__contact-us-form-wrapper'>
 								<form action='#'>
 									<div className='fno-contact-us-block__form-contact-name'>

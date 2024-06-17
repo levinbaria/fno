@@ -57,6 +57,7 @@ function Edit(props) {
     attributes,
     setAttributes
   } = props;
+  // Destructuring attributes.
   const {
     contactHeading,
     contactHeadingTag,
@@ -78,6 +79,7 @@ function Edit(props) {
     country,
     comment
   } = attributes;
+  // Object for the Stylings.
   const contactHeadingStyle = {};
   contactHeadingSize && isCustomHeadingSize && (contactHeadingStyle.fontSize = contactHeadingSize + 'px');
   contactHeadingColor && (contactHeadingStyle.color = contactHeadingColor);
@@ -142,7 +144,7 @@ function Edit(props) {
       contactHeadingSize: parseInt(contactHeadingSize)
     })
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
-    title: "contact Description Settings",
+    title: "Contact Description Settings",
     initialOpen: false
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ColorPalette, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Description Color', 'fno-contact-us-block'),
@@ -450,7 +452,6 @@ __webpack_require__.r(__webpack_exports__);
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
 
-
 function Save(props) {
   const {
     attributes
@@ -468,6 +469,8 @@ function Save(props) {
     imgOverlayColor,
     imgOverlayOpacity
   } = attributes;
+
+  // Object for the Styling.
   const contactHeadingStyle = {};
   contactHeadingSize && isCustomHeadingSize && (contactHeadingStyle.fontSize = contactHeadingSize + 'px');
   contactHeadingColor && (contactHeadingStyle.color = contactHeadingColor);

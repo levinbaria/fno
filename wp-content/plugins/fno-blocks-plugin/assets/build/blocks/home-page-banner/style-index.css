@@ -1,127 +1,108 @@
 /*!**************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./assets/src/blocks/home-page-banner/style.css ***!
   \**************************************************************************************************************************************************************************************************/
+/* Main Banner Block Stylings */
 .fno-banner-block {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background-size: cover;
-    background-position: 71%;
-    background-repeat: no-repeat;
-    position: relative;
-    max-height: 680px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background-size: cover;
+	background-position: 71%;
+	background-repeat: no-repeat;
+	position: relative;
+	max-height: 680px;
 }
-
+/* Overlay Styling */
 .fno-banner-block__overlay {
-    position: absolute;
-    inset: 0;
+	position: absolute;
+	inset: 0;
 }
-
+/* Home Page Banner wrapper stylings */
 .fno-banner-block__wrapper {
-    margin: 128px auto 128px 0;
-    padding: 70px 70px 60px 63px;
-    width: 80%;
-    max-width: 720px;
-    opacity: 0.725;
-    background-image: linear-gradient(63deg, #ab0b3d 0%, #af0a3b 8%, #bc0737 18%, #d30430 27%, #ea002a 35%, #e70363 51%, #e50695 65%, #9e28b5 100%);
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    box-sizing: border-box;
+	margin: 128px auto 128px 0;
+	padding: 70px 70px 60px 63px;
+	width: 80%;
+	max-width: 720px;
+	opacity: 0.725;
+	background-image: linear-gradient(63deg, #ab0b3d 0%, #af0a3b 8%, #bc0737 18%, #d30430 27%, #ea002a 35%, #e70363 51%, #e50695 65%, #9e28b5 100%);
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	box-sizing: border-box;
 }
-
+/* Banner Heading styling */
 .fno-banner-block__banner-heading {
-    font-size: 60px;
-    line-height: 76px;
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 700;
-    margin: 0 auto 40px;
+	font-size: 60px;
+	line-height: 76px;
+	font-family: 'Urbanist', sans-serif;
+	font-weight: 700;
+	margin: 0 auto 40px;
 }
-
+/* Banner Description styling */
 .fno-banner-block__banner-description {
-    font-size: 18px;
-    line-height: 30px;
-    font-weight: 400;
-    font-family: 'be_vietnam_proregular', sans-serif;
-    margin: 0 auto 40px;
-    padding: 0;
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 400;
+	font-family: 'be_vietnam_proregular', sans-serif;
+	margin: 0 auto 40px;
+	padding: 0;
 }
-
+/* Banner Button styling */
 .fno-banner-block__btn-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	cursor: pointer;
 }
 
 .fno-banner-block__banner-btn {
-    font-size: 18px;
-    font-weight: 600;
-    font-family: 'Urbanist', sans-serif;
-    background: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
+	font-size: 18px;
+	font-weight: 600;
+	font-family: 'Urbanist', sans-serif;
+	background: transparent;
+	border: none;
+	color: white;
+	cursor: pointer;
 }
 
 .fno-banner-block__banner-btn:hover {
-    color: lightcoral;
+	color: lightcoral;
 }
 
 .fno-banner-block__btn-wrapper i {
-    color: white;
-    font-size: 1.25rem;
+	color: white;
+	font-size: 1.25rem;
 }
-
+/* Media Queries */
 @media screen and (max-width:1024px) {
-    
-    .fno-banner-block {
-        margin: 30px 0 0;
-    }
+	
+	.fno-banner-block {
+		margin: 30px 0 0;
+	}
 }
 
 @media screen and (max-width:767px) {
 
-    .fno-banner-block__wrapper {
-        padding: 40px;
-        width: 80%;
-    }
+	.fno-banner-block__wrapper {
+		padding: 40px;
+		width: 80%;
+	}
 
-    .fno-banner-block__banner-heading {
-        font-size: 40px;
-        line-height: 50px;
-    }
-
+	.fno-banner-block__banner-heading {
+		font-size: 40px;
+		line-height: 50px;
+	}
 }
 
 @media screen and (max-width:425px) {
 
-    .fno-banner-block__banner-heading {
-        font-size: 30px;
-        line-height: 40px;
-    }
+	.fno-banner-block__banner-heading {
+		font-size: 30px;
+		line-height: 40px;
+	}
 
-    .fno-banner-block__banner-description {
-        font-size: 15px;
-    }
+	.fno-banner-block__banner-description {
+		font-size: 15px;
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .fno-banner-block__overlay {
-    position: absolute;
-    inset: 0;
-} */
-
 
 /*# sourceMappingURL=style-index.css.map*/

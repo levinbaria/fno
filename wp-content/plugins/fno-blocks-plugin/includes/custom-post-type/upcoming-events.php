@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Registers the custom post type 'Upcoming Events' and its taxonomy.
+ */
 function fno_theme__register_upcoming_events()
 {
 

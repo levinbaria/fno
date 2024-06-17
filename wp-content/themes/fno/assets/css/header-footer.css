@@ -15,12 +15,17 @@
 
 }
 
+:root {
+    --font-family-1: 'Urbanist', sans-serif;
+    --font-family-2: 'be_vietnam_proregular', sans-serif;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
-
+/* Body Styling */
 body {
 	font-size: 16px;
 	min-height: 100vh;
@@ -32,7 +37,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	font-family: "Urbanist", sans-serif;
+	font-family: var(--font-family-1);
 	width: 100%;
 	position: relative;
 }
@@ -94,7 +99,6 @@ span .fa-magnifying-glass {
 	transform: translateY(2px);
 }
 
-
 .fno-theme__logo-section-addon-functionality form {
 	position: relative;
 	margin: 0 40px 0 0;
@@ -127,6 +131,28 @@ span .fa-magnifying-glass {
 	align-items: center;
 	position: relative;
 	transition: all 0.5s ease;
+}
+
+.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0 auto;
+	padding: 35px 40px;
+	width: 100%;
+	z-index: 1000;
+	background-color: white;
+	transition: all 0.5s ease;
+}
+
+.fixed::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(to right, #EA002A, #E50695, #61CAC9, #C1D500, #CDD208, #EDCA1D, #FFC529, #FF9E24, #FF671C, #BB4700);
 }
 
 .fno-theme__nav-bar-items {
@@ -253,7 +279,7 @@ span .fa-magnifying-glass {
 	line-height: 30px;
 	color: #262e36;
 	font-weight: 400;
-	font-family: 'be_vietnam_proregular', sans-serif;
+	font-family: var(--font-family-2);
 	text-decoration: none;
 }
 
@@ -312,7 +338,7 @@ span .fa-magnifying-glass {
 .fno-theme__fno-short-desc {
 	margin: 50px 0 10px;
 	font-weight: 400;
-	font-family: 'be_vietnam_proregular', sans-serif;
+	font-family: var(--font-family-2);
 	color: #ffffff;
 	font-size: 16px;
 	line-height: 30px;
@@ -334,7 +360,7 @@ span .fa-magnifying-glass {
 }
 
 .fno-theme__footer-nav-bar-items>li {
-	padding: 100px 36px;
+	padding: 100px 25px;
 	border-left: 2px solid #101013;
 	border-bottom: 2px solid #101013;
 	width: max-content;
@@ -345,7 +371,7 @@ span .fa-magnifying-glass {
 	color: #ffffff;
 	text-decoration: none;
 	font-weight: 700;
-	font-family: 'Urbanist', sans-serif;
+	font-family: var(--font-family-1);
 }
 
 .fno-theme__footer-nav-bar-items a i {
@@ -367,7 +393,7 @@ span .fa-magnifying-glass {
 	font-size: 16px;
 	line-height: 40px;
 	color: #b9c3cc;
-	font-family: 'be_vietnam_proregular', sans-serif;
+	font-family: var(--font-family-2);
 	font-weight: 400;
 	text-decoration: none;
 }
@@ -399,7 +425,7 @@ span .fa-magnifying-glass {
 	font-size: 14px;
 	line-height: 28px;
 	color: #b9c3cc;
-	font-family: 'be_vietnam_proregular', sans-serif;
+	font-family: var(--font-family-2);
 	font-weight: 400;
 }
 
@@ -408,7 +434,7 @@ span .fa-magnifying-glass {
 	line-height: 36px;
 	color: #ffffff;
 	font-weight: 700;
-	font-family: 'Urbanist', sans-serif;
+	font-family: var(--font-family-1);
 	display: flex;
 	gap: 14px;
 }
@@ -486,8 +512,8 @@ ul.fno-theme__social-icons-wrapper {
     background-color: #005f8d;
 }
 
+/* Media Queries */
 @media screen and (min-width: 1200px) and (max-width:1250px) {
-
 
 	.fno-theme__nav-bar-items .sub-menu li {
 		padding: 0 0 30px 0;
@@ -570,7 +596,7 @@ ul.fno-theme__social-icons-wrapper {
 
 	/* Navbar Submenu Styling  */
 	.fno-theme__nav-bar-items .sub-menu {
-		font-family: 'be_vietnam_proregular', sans-serif;
+		font-family: var(--font-family-2);
 		position: initial;
 		background-color: white;
 		padding: 20px 25px 0;
@@ -578,6 +604,10 @@ ul.fno-theme__social-icons-wrapper {
 
 	.fno-theme__nav-bar-items .sub-menu li {
 		padding: 0;
+	}
+
+	.fno-theme__footer-nav-bar-items>li .sub-menu li:hover {
+		color: black;
 	}
 
 	.fno-theme__nav-bar-items .sub-menu li a {
@@ -719,8 +749,6 @@ ul.fno-theme__social-icons-wrapper {
     .page-content {
         font-size: 16px;
     }
-
-
 }
 
 @media screen and (max-width:320px) {

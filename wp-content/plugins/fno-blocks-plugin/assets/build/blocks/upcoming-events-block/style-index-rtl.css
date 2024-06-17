@@ -1,17 +1,22 @@
 /*!*******************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./assets/src/blocks/upcoming-events-block/style.css ***!
   \*******************************************************************************************************************************************************************************************************/
+:root {
+	--font-family-1: 'Urbanist', sans-serif;
+	--font-family-2: 'be_vietnam_proregular', sans-serif;
+}
+/* Main Container styling of the upcoming events */
 main.fno-upcoming-events__main-container {
 	width: 100%;
 	background-color: rgb(243, 244, 246, 0.2);
 	opacity: 0.902;
 }
-
+/* Banner Image stylings */
 .fno-upcoming-events__events-banner-image img {
 	height: 400px;
 	width: 100%;
 }
-
+/* Upcoming events section stylings */
 section.fno-upcoming-events__events-hero-wrapper {
 	max-width: 1240px;
 	padding: 0 20px;
@@ -20,7 +25,7 @@ section.fno-upcoming-events__events-hero-wrapper {
 	flex-direction: column;
 	justify-content: center;
 }
-
+/* Header stylings */
 .fno-upcoming-events__upcoming-event-header {
 	display: flex;
 	flex-direction: column;
@@ -32,7 +37,7 @@ section.fno-upcoming-events__events-hero-wrapper {
 	font-size: 50px;
 	color: #000000;
 	font-weight: 700;
-	font-family: 'Urbanist', sans-serif;
+	font-family: var(--font-family-1);
 	text-align: center;
 	margin: 0 auto 36px;
 }
@@ -44,9 +49,9 @@ section.fno-upcoming-events__events-hero-wrapper {
 	font-weight: 400;
 	text-align: center;
 	padding: 0 115px;
-	font-family: 'be_vietnam_proregular', sans-serif;
+	font-family: var(--font-family-2);
 }
-
+/* Filteration of categories stylings */
 .fno-upcoming-events__filter-events-wrapper {
 	margin: 0 0 100px;
 }
@@ -77,10 +82,10 @@ ul.fno-upcoming-evets__categories {
 	font-size: 20px;
 	color: #262e36;
 	font-weight: 700;
-	font-family: 'Urbanist', sans-serif;
+	font-family: var(--font-family-1);
 	text-decoration: none;
 }
-
+/* Search box stylings */
 .fno-upcoming-events__event-search {
 	margin-right: auto;
 	position: relative;
@@ -99,7 +104,7 @@ ul.fno-upcoming-evets__categories {
 	font-size: 18px;
 	line-height: 30px;
 	font-weight: 400;
-	font-family: 'be_vietnam_proregular', sans-serif;
+	font-family: var(--font-family-2);
 }
 
 
@@ -109,7 +114,7 @@ ul.fno-upcoming-evets__categories {
 	right: 24px;
 	z-index: 1;
 }
-
+/*Styling of the ftched post conatiner */
 .fno-upcoming-events__events-card-wrapper {
 	margin: 57px 0 0;
 	display: flex;
@@ -117,7 +122,7 @@ ul.fno-upcoming-evets__categories {
 	flex-wrap: wrap;
 	justify-content: center;
 }
-
+/* Individual card of post stylings */
 .fno-upcoming-events__individual-event-card {
 	background-color: #ffffff;
 	filter: drop-shadow(0 0 28.5px rgba(111, 137, 163, 0.2));
@@ -141,7 +146,7 @@ ul.fno-upcoming-evets__categories {
 	background-image: linear-gradient(-90deg, #00153f 0%, #0069c1 100%);
 
 }
-
+/* Individual card image styling */
 .fno-upcoming-events__individual-event-img {
 	width: 100%;
 }
@@ -150,7 +155,7 @@ ul.fno-upcoming-evets__categories {
 	width: 100%;
 	height: 174px;
 }
-
+/* Card Title styling */
 .fno-upcoming-events__individual-event-title {
 	margin: 20px 0 30px;
 }
@@ -161,9 +166,9 @@ ul.fno-upcoming-evets__categories {
 	color: #000000;
 	font-weight: 700;
 	text-align: center;
-	font-family: 'Urbanist', sans-serif;
+	font-family: var(--font-family-1);
 }
-
+/* Card Address styling */
 .fno-upcoming-events__event-address {
 	display: flex;
 	flex-direction: column;
@@ -176,9 +181,9 @@ ul.fno-upcoming-evets__categories {
 	color: #262e36;
 	font-weight: 400;
 	text-align: center;
-	font-family: 'be_vietnam_proregular', sans-serif;
+	font-family: var(--font-family-2);
 }
-
+/* Card Date Styling */
 .fno-upcoming-events__event-date {
 	display: flex;
 	align-items: center;
@@ -197,9 +202,9 @@ ul.fno-upcoming-evets__categories {
 	line-height: 40px;
 	color: #262e36;
 	font-weight: 500;
-	font-family: 'be_vietnam_proregular', sans-serif;
+	font-family: var(--font-family-2);
 }
-
+/* Explore button stylings */
 .fno-upcoming-events__event-explore {
 	margin: auto 0 0;
 	display: flex;
@@ -219,7 +224,7 @@ ul.fno-upcoming-evets__categories {
 	font-size: 18px;
 	color: #262e36;
 	font-weight: 600;
-	font-family: 'Urbanist', sans-serif;
+	font-family: var(--font-family-1);
 }
 
 .fno-upcoming-events__event-explore::before {
@@ -239,8 +244,7 @@ ul.fno-upcoming-evets__categories {
 	background-image: linear-gradient(-90deg, #00153f 0%, #0069c1 100%);
 	color: white;
 }
-
-
+/* Media Queries */
 @media screen and (max-width:1024px) {
 
 	main.fno-upcoming-events__main-container {
@@ -263,7 +267,6 @@ ul.fno-upcoming-evets__categories {
 	.fno-upcoming-events__event-search input {
 		width: 100%;
 	}
-
 }
 
 @media screen and (max-width:650px) {
@@ -275,7 +278,6 @@ ul.fno-upcoming-evets__categories {
 	.fno-upcoming-events__event-main-heading h2 {
 		font-size: 40px;
 	}
-
 }
 
 @media screen and (max-width:376px) {

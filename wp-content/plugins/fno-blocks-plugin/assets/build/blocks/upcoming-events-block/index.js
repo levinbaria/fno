@@ -69,6 +69,7 @@ function Edit(props) {
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.useBlockProps)({
     className: 'fno-upcoming-events'
   });
+  // Banner Image selection function.
   const onSelectImage = media => {
     setAttributes({
       eventsBannerImage: {

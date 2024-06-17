@@ -36,20 +36,6 @@ function fno_blocks_custom_category_block( $categories ) {
 
 add_filter( 'block_categories', 'fno_blocks_custom_category_block' );
 
-// Function to enqueue custom script on both front-end and backend.
-// function fno_blocks_custom_scripts() {
-// wp_enqueue_script( 'jquery-ui-sortable' );
-// wp_enqueue_script(
-// 'my-custom-script',
-// plugin_dir_url( __FILE__ ) . 'library/custom-script.js',
-// array( 'jquery', 'jquery-ui-sortable' ),
-// '1.0',
-// true
-// );
-// }
-// add_action( 'enqueue_block_assets', 'fno_blocks_custom_scripts' );
-
-
 function fno_theme_enqueue_slick_styles() {
 	// Defined the plugin directory URL
 	$plugin_dir_url = plugin_dir_url( __FILE__ );
